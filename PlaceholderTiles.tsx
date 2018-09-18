@@ -240,6 +240,12 @@
  </tile>
  <tile id="207">
   <image width="132" height="101" source="../../../Grist/Game Assets/Kenney Game Assets (version 40)/Art/Isometric tiles - City (128 assets)/PNG/cityTiles_079.png"/>
+  <objectgroup draworder="index">
+   <object id="2" x="-17" y="106.5" width="0.25" height="0.5"/>
+   <object id="3" x="41.25" y="5">
+    <polygon points="-0.5,2.25 75.5,40.75 99.75,28.5 23.5,-11"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="208">
   <image width="132" height="99" source="../../../Grist/Game Assets/Kenney Game Assets (version 40)/Art/Isometric tiles - City (128 assets)/PNG/cityTiles_080.png"/>
@@ -261,9 +267,19 @@
  </tile>
  <tile id="214">
   <image width="133" height="101" source="../../../Grist/Game Assets/Kenney Game Assets (version 40)/Art/Isometric tiles - City (128 assets)/PNG/cityTiles_086.png"/>
+  <objectgroup draworder="index">
+   <object id="1" x="83.5" y="9.5">
+    <polygon points="6.25,-1.5 -73.5,39.25 -96.5,27.75 -15.25,-13.75"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="215">
   <image width="132" height="99" source="../../../Grist/Game Assets/Kenney Game Assets (version 40)/Art/Isometric tiles - City (128 assets)/PNG/cityTiles_087.png"/>
+  <objectgroup draworder="index">
+   <object id="1" x="115" y="23">
+    <polygon points="10.25,-6.5 -79.25,37.75 -62.5,47.25 27.75,2.5"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="216">
   <image width="132" height="101" source="../../../Grist/Game Assets/Kenney Game Assets (version 40)/Art/Isometric tiles - City (128 assets)/PNG/cityTiles_088.png"/>
@@ -285,6 +301,11 @@
  </tile>
  <tile id="222">
   <image width="132" height="99" source="../../../Grist/Game Assets/Kenney Game Assets (version 40)/Art/Isometric tiles - City (128 assets)/PNG/cityTiles_094.png"/>
+  <objectgroup draworder="index">
+   <object id="1" x="17.5" y="23.5">
+    <polygon points="-19.25,-11.25 81,39.75 57.75,56.25 -39.25,3.5"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="223">
   <image width="132" height="101" source="../../../Grist/Game Assets/Kenney Game Assets (version 40)/Art/Isometric tiles - City (128 assets)/PNG/cityTiles_095.png"/>
@@ -342,6 +363,14 @@
  </tile>
  <tile id="241">
   <image width="133" height="101" source="../../../Grist/Game Assets/Kenney Game Assets (version 40)/Art/Isometric tiles - City (128 assets)/PNG/cityTiles_113.png"/>
+  <objectgroup draworder="index">
+   <object id="1" x="18.75" y="43.5">
+    <polygon points="-14,8.5 -27,-6.75 61.25,-50.5 78.25,-40.5"/>
+   </object>
+   <object id="2" x="114.75" y="43">
+    <polygon points="14.5,9.25 -73,-35.75 -53.25,-46.25 31,-4"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="242">
   <image width="132" height="133" source="../../../Grist/Game Assets/Kenney Game Assets (version 40)/Art/Isometric tiles - City (128 assets)/PNG/cityTiles_114.png"/>
@@ -354,9 +383,25 @@
  </tile>
  <tile id="245">
   <image width="133" height="101" source="../../../Grist/Game Assets/Kenney Game Assets (version 40)/Art/Isometric tiles - City (128 assets)/PNG/cityTiles_117.png"/>
+  <objectgroup draworder="index">
+   <object id="1" x="83" y="8.5">
+    <polygon points="11,-2.25 -78.5,41.75 -103,28 -15.25,-19.75"/>
+   </object>
+   <object id="2" x="93.75" y="63.75">
+    <polygon points="0.25,-1.5 -89.25,-45.5 -112.5,-32.25 -24.5,13.25"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="246">
   <image width="132" height="101" source="../../../Grist/Game Assets/Kenney Game Assets (version 40)/Art/Isometric tiles - City (128 assets)/PNG/cityTiles_118.png"/>
+  <objectgroup draworder="index">
+   <object id="1" x="33.75" y="66.25">
+    <polygon points="5.5,-4.5 23,5.5 110.5,-38.5 91,-47.5"/>
+   </object>
+   <object id="2" x="43.25" y="6.5">
+    <polygon points="-6.25,-1.25 81.75,43.5 98.5,32 11.5,-12"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="247">
   <image width="132" height="129" source="../../../Grist/Game Assets/Kenney Game Assets (version 40)/Art/Isometric tiles - City (128 assets)/PNG/cityTiles_119.png"/>
@@ -366,6 +411,14 @@
  </tile>
  <tile id="249">
   <image width="133" height="99" source="../../../Grist/Game Assets/Kenney Game Assets (version 40)/Art/Isometric tiles - City (128 assets)/PNG/cityTiles_121.png"/>
+  <objectgroup draworder="index">
+   <object id="2" x="1.25" y="31">
+    <polygon points="-8.25,-3.5 79.25,40.5 97.5,32 8,-12"/>
+   </object>
+   <object id="3" x="115.5" y="23">
+    <polygon points="5.25,-4.5 -81,40.25 -63.75,49.5 24,4.5"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="250">
   <image width="132" height="101" source="../../../Grist/Game Assets/Kenney Game Assets (version 40)/Art/Isometric tiles - City (128 assets)/PNG/cityTiles_122.png"/>
