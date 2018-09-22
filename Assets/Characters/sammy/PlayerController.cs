@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public MouseModeCursorPair[] MouseCursors;
     public DialogueRunner DialogueRunner;
     public GameObject DialogueTextBox;
+    public GameObject MenuBarButtons;
 
     [SerializeField]
     private float horizontalSpeed = 10f;
@@ -49,8 +50,9 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (DialogueTextBox.activeInHierarchy)
+        if (DialogueTextBox.activeInHierarchy || MenuBarButtons.activeInHierarchy)
         {
+            Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
             return;
         }
 
