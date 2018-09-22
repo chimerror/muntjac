@@ -11,6 +11,22 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1143019844477798}
   m_IsPrefabAsset: 1
+--- !u!1 &1011560049818082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4293433888368172}
+  - component: {fileID: 61361974435751714}
+  m_Layer: 0
+  m_Name: InteractionCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1143019844477798
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,8 +75,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4480544956633920}
+  - {fileID: 4293433888368172}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4293433888368172
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1011560049818082}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4157956884442066}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4480544956633920
 Transform:
@@ -147,7 +177,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.1, y: -1.6}
+  m_Offset: {x: 3, y: -85}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -158,7 +188,32 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 85, y: 250}
+  m_Size: {x: 85, y: 85}
+  m_EdgeRadius: 0
+--- !u!61 &61361974435751714
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1011560049818082}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 3, y: 42.5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 128, y: 255}
+    newSize: {x: 1.93, y: 3.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 85, y: 170}
   m_EdgeRadius: 0
 --- !u!81 &81628488970088384
 AudioListener:
@@ -205,10 +260,16 @@ MonoBehaviour:
   - Mode: 5
     Cursor: {fileID: 2800000, guid: 9d83e1cc11592bb4cb4061276020348e, type: 3}
   DialogueRunner: {fileID: 0}
+  DialogueTextBox: {fileID: 0}
   horizontalSpeed: 10
   verticalSpeed: 10
   mouseMoveSpeed: 10
-  raycastDistance: 50
+  raycastDistance: 25
+  stopRight: 0
+  stopLeft: 0
+  stopUp: 0
+  stopDown: 0
+  keepMoving: 1
 --- !u!212 &212129500986863672
 SpriteRenderer:
   m_ObjectHideFlags: 1

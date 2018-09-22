@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public MouseMode CurrentMouseMode = MouseMode.Walk;
     public MouseModeCursorPair[] MouseCursors;
     public DialogueRunner DialogueRunner;
+    public GameObject DialogueTextBox;
 
     [SerializeField]
     private float horizontalSpeed = 10f;
@@ -22,17 +23,24 @@ public class PlayerController : MonoBehaviour
     private float raycastDistance = 25f;
 
     private Dictionary<MouseMode, Texture2D> MouseCursorDictionary = new Dictionary<MouseMode, Texture2D>();
-    private BoxCollider2D playerCollider;
+    private BoxCollider2D playerMoveCollider;
+    [SerializeField]
     private bool stopRight;
+    [SerializeField]
     private bool stopLeft;
+    [SerializeField]
     private bool stopUp;
+    [SerializeField]
     private bool stopDown;
-    private bool isMouseMoving;
+    [SerializeField]
+    private bool keepMoving = true;
     private Vector2 mouseMoveTarget;
+    private RaycastHit2D[] results = new RaycastHit2D[5];
+    private ContactFilter2D filter = new ContactFilter2D();
 
     private void Awake()
     {
-        playerCollider = GetComponent<BoxCollider2D>();
+        playerMoveCollider = GetComponent<BoxCollider2D>();
         foreach (MouseModeCursorPair pair in MouseCursors)
         {
             MouseCursorDictionary[pair.Mode] = pair.Cursor;
@@ -41,15 +49,14 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Vector3 currentPosition = transform.position;
-        float desiredHorizontal = Input.GetAxis("Horizontal");
-        float desiredVertical = Input.GetAxis("Vertical");
-
-        if (isMouseMoving && (desiredHorizontal != 0 || desiredVertical != 0))
+        if (DialogueTextBox.activeInHierarchy)
         {
-            isMouseMoving = false;
+            return;
         }
-        else if (Input.GetMouseButtonDown(0))
+
+        Vector3 currentPosition = transform.position;
+
+        if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
@@ -57,8 +64,8 @@ public class PlayerController : MonoBehaviour
             switch (CurrentMouseMode)
             {
                 case MouseMode.Walk:
-                    isMouseMoving = true;
                     mouseMoveTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    keepMoving = true;
                     break;
 
                 case MouseMode.Look:
@@ -113,39 +120,24 @@ public class PlayerController : MonoBehaviour
 
         Cursor.SetCursor(MouseCursorDictionary[CurrentMouseMode], Vector2.zero, CursorMode.Auto);
 
-        if (!isMouseMoving)
-        {
-            if ((desiredHorizontal > 0 && !stopRight) || (desiredHorizontal < 0 && !stopLeft))
-            {
-                currentPosition.x += desiredHorizontal * horizontalSpeed;
-            }
-            if ((desiredVertical > 0 && !stopUp) || (desiredVertical < 0 && !stopDown))
-            {
-                currentPosition.y += desiredVertical * verticalSpeed;
-            }
-            transform.position = currentPosition;
-        }
-        else if (isMouseMoving && (Vector2)transform.position != mouseMoveTarget)
+        if (keepMoving && (Vector2)transform.position != mouseMoveTarget)
         {
             Vector2 desiredPosition = Vector2.MoveTowards(transform.position, mouseMoveTarget, mouseMoveSpeed);
-            Vector2 delta = (Vector2)transform.position - desiredPosition;
-            if ((delta.x > 0 && !stopRight) || (delta.x < 0 && !stopLeft) || (delta.y > 0 && !stopUp) || (delta.y < 0 && !stopDown))
+            transform.position = desiredPosition;
+            if (stopRight || stopLeft || stopUp || stopDown)
             {
-                transform.position = desiredPosition;
-            }
-            else
-            {
-                isMouseMoving = false;
+                transform.position = currentPosition;
+                keepMoving = false;
             }
         }
     }
 
     private void FixedUpdate()
     {
-        RaycastHit2D[] results = new RaycastHit2D[5];
-        stopRight = playerCollider.Raycast(Vector2.right, results, raycastDistance) > 0;
-        stopLeft = playerCollider.Raycast(Vector2.left, results, raycastDistance) > 0;
-        stopUp = playerCollider.Raycast(Vector2.up, results, raycastDistance) > 0;
-        stopDown = playerCollider.Raycast(Vector2.down, results, raycastDistance) > 0;
+        filter.useTriggers = false;
+        stopRight = playerMoveCollider.Raycast(Vector2.right, filter, results, raycastDistance) > 0;
+        stopLeft = playerMoveCollider.Raycast(Vector2.left, filter, results, raycastDistance) > 0;
+        stopUp = playerMoveCollider.Raycast(Vector2.up, filter, results, raycastDistance) > 0;
+        stopDown = playerMoveCollider.Raycast(Vector2.down, filter, results, raycastDistance) > 0;
     }
 }
