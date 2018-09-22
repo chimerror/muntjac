@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114482129432072134}
   - component: {fileID: 61084060368007950}
   - component: {fileID: 50451928112995240}
+  - component: {fileID: 114394834235575818}
   m_Layer: 0
   m_Name: Sammy
   m_TagString: Untagged
@@ -53,7 +54,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1143019844477798}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -146,7 +147,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.1, y: -84.73}
+  m_Offset: {x: 3.1, y: -1.6}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -157,7 +158,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 85, y: 85}
+  m_Size: {x: 85, y: 250}
   m_EdgeRadius: 0
 --- !u!81 &81628488970088384
 AudioListener:
@@ -166,6 +167,18 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1165115482500296}
   m_Enabled: 1
+--- !u!114 &114394834235575818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143019844477798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b61c90d8ef44540a7c6e44f0783caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeToShow: Sammy.Look
 --- !u!114 &114482129432072134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -177,8 +190,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5567d19b92e58d94caa532e16d73520a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentMouseMode: 0
+  MouseCursors:
+  - Mode: 0
+    Cursor: {fileID: 2800000, guid: 68b062e681318eb4d8971279ef839c66, type: 3}
+  - Mode: 1
+    Cursor: {fileID: 2800000, guid: ee0d0deb7fcd0f640b16dab2119e7e49, type: 3}
+  - Mode: 2
+    Cursor: {fileID: 2800000, guid: 3b31f24145784fd449a4f848b20114e8, type: 3}
+  - Mode: 3
+    Cursor: {fileID: 2800000, guid: cb76834c737bbec4194734daaadd960c, type: 3}
+  - Mode: 4
+    Cursor: {fileID: 2800000, guid: df3e8193fbb6acd4e90a55db3b53cad1, type: 3}
+  - Mode: 5
+    Cursor: {fileID: 2800000, guid: 9d83e1cc11592bb4cb4061276020348e, type: 3}
+  DialogueRunner: {fileID: 0}
   horizontalSpeed: 10
   verticalSpeed: 10
+  mouseMoveSpeed: 10
   raycastDistance: 50
 --- !u!212 &212129500986863672
 SpriteRenderer:
@@ -214,7 +243,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 9194f5a9c12fa14438e648523ab11bc9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

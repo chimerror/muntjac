@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class PlayerController : MonoBehaviour
 {
+    public MouseMode CurrentMouseMode = MouseMode.Walk;
+    public MouseModeCursorPair[] MouseCursors;
+    public DialogueRunner DialogueRunner;
+
     [SerializeField]
     private float horizontalSpeed = 10f;
 
@@ -16,6 +21,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float raycastDistance = 25f;
 
+    private Dictionary<MouseMode, Texture2D> MouseCursorDictionary = new Dictionary<MouseMode, Texture2D>();
     private BoxCollider2D playerCollider;
     private bool stopRight;
     private bool stopLeft;
@@ -27,6 +33,10 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         playerCollider = GetComponent<BoxCollider2D>();
+        foreach (MouseModeCursorPair pair in MouseCursors)
+        {
+            MouseCursorDictionary[pair.Mode] = pair.Cursor;
+        }
     }
 
     private void Update()
@@ -39,11 +49,69 @@ public class PlayerController : MonoBehaviour
         {
             isMouseMoving = false;
         }
-        else if(Input.GetMouseButtonDown(0))
+        else if (Input.GetMouseButtonDown(0))
         {
-            isMouseMoving = true;
-            mouseMoveTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
+
+            switch (CurrentMouseMode)
+            {
+                case MouseMode.Walk:
+                    isMouseMoving = true;
+                    mouseMoveTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    break;
+
+                case MouseMode.Look:
+                    if (hit.collider != null)
+                    {
+                        GameObject clicked = hit.transform.gameObject;
+                        Lookable lookable = clicked.GetComponent<Lookable>();
+                        if (lookable != null)
+                        {
+                            DialogueRunner.StartDialogue(lookable.nodeToShow);
+                        }
+                    }
+                    break;
+
+                default:
+                    break;
+            }
         }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            switch (CurrentMouseMode)
+            {
+                case MouseMode.Walk:
+                    CurrentMouseMode = MouseMode.Look;
+                    break;
+
+                case MouseMode.Look:
+                    CurrentMouseMode = MouseMode.Touch;
+                    break;
+
+                case MouseMode.Touch:
+                    CurrentMouseMode = MouseMode.Taste;
+                    break;
+
+                case MouseMode.Taste:
+                    CurrentMouseMode = MouseMode.Speak;
+                    break;
+
+                case MouseMode.Speak:
+                    CurrentMouseMode = MouseMode.Zipper;
+                    break;
+
+                case MouseMode.Zipper:
+                    CurrentMouseMode = MouseMode.Walk;
+                    break;
+
+                default:
+                    Debug.LogError("Unknown Mouse Mode!");
+                    break;
+            }
+        }
+
+        Cursor.SetCursor(MouseCursorDictionary[CurrentMouseMode], Vector2.zero, CursorMode.Auto);
 
         if (!isMouseMoving)
         {
@@ -59,13 +127,15 @@ public class PlayerController : MonoBehaviour
         }
         else if (isMouseMoving && (Vector2)transform.position != mouseMoveTarget)
         {
-            if (stopRight || stopLeft || stopUp || stopDown)
+            Vector2 desiredPosition = Vector2.MoveTowards(transform.position, mouseMoveTarget, mouseMoveSpeed);
+            Vector2 delta = (Vector2)transform.position - desiredPosition;
+            if ((delta.x > 0 && !stopRight) || (delta.x < 0 && !stopLeft) || (delta.y > 0 && !stopUp) || (delta.y < 0 && !stopDown))
             {
-                isMouseMoving = false;
+                transform.position = desiredPosition;
             }
             else
             {
-                transform.position = Vector2.MoveTowards(transform.position, mouseMoveTarget, mouseMoveSpeed);
+                isMouseMoving = false;
             }
         }
     }
