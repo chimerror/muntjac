@@ -2,3 +2,7 @@ title: Bill.Look
 ---
 Hey! It's a crisp twenty dollar bill!
 ===
+title: Bill.Default
+---
+Better grab that bill before someone else does!
+===

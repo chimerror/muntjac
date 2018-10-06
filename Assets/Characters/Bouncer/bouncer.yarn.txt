@@ -2,3 +2,7 @@ title: Bouncer.Look
 ---
 An imposing bouncer stands in front of the door to Club Pred.
 ===
+title: Bouncer.Default
+---
+You suppose they wouldn't like that.
+===

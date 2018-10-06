@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114482129432072134}
   - component: {fileID: 61084060368007950}
   - component: {fileID: 50451928112995240}
-  - component: {fileID: 114394834235575818}
+  - component: {fileID: 114290801677316844}
   m_Layer: 0
   m_Name: Sammy
   m_TagString: Untagged
@@ -222,7 +222,7 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1165115482500296}
   m_Enabled: 1
---- !u!114 &114394834235575818
+--- !u!114 &114290801677316844
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,10 +230,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1143019844477798}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81b61c90d8ef44540a7c6e44f0783caf, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c4e394b1b15cf4478d4ae680ba78496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeToShow: Sammy.Look
+  MouseNodeStrings:
+  - Mode: 1
+    NodeToRun: Sammy.Look
+  DefaultNode: 
 --- !u!114 &114482129432072134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -261,6 +264,7 @@ MonoBehaviour:
     Cursor: {fileID: 2800000, guid: 9d83e1cc11592bb4cb4061276020348e, type: 3}
   DialogueRunner: {fileID: 0}
   DialogueTextBox: {fileID: 0}
+  MenuBarButtons: {fileID: 0}
   horizontalSpeed: 10
   verticalSpeed: 10
   mouseMoveSpeed: 10

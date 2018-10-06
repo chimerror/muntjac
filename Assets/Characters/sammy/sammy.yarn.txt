@@ -2,3 +2,7 @@ title: Sammy.Look
 ---
 It's you! Sammy the Skunk!
 ===
+title: Sammy.Default
+---
+Leave yourself alone, Sammy.
+===

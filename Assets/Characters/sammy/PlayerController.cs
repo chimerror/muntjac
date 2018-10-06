@@ -70,19 +70,16 @@ public class PlayerController : MonoBehaviour
                     keepMoving = true;
                     break;
 
-                case MouseMode.Look:
+                default:
                     if (hit.collider != null)
                     {
                         GameObject clicked = hit.transform.gameObject;
-                        Lookable lookable = clicked.GetComponent<Lookable>();
-                        if (lookable != null)
+                        Interactable interactable = clicked.GetComponent<Interactable>();
+                        if (interactable != null)
                         {
-                            DialogueRunner.StartDialogue(lookable.nodeToShow);
+                            interactable.Interact(CurrentMouseMode, DialogueRunner);
                         }
                     }
-                    break;
-
-                default:
                     break;
             }
         }
