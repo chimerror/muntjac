@@ -6,3 +6,7 @@ title: Sammy.Default
 ---
 Leave yourself alone, Sammy.
 ===
+title: Sammy.TooFar
+---
+It's too far away. Get closer.
+===

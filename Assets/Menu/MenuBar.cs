@@ -7,6 +7,7 @@ public class MenuBar : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject MenuButtons;
     public PlayerController Player;
+    public GameObject InventoryMenu;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -46,5 +47,15 @@ public class MenuBar : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void OnZipperClicked()
     {
         Player.CurrentMouseMode = MouseMode.Zipper;
+    }
+
+    public void OnInventoryClicked()
+    {
+        InventoryMenu.SetActive(true);
+    }
+
+    public void OnInventoryCloseClicked()
+    {
+        InventoryMenu.SetActive(false);
     }
 }

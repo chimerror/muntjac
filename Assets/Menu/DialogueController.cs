@@ -11,7 +11,9 @@ public class DialogueController : Yarn.Unity.DialogueUIBehaviour
 
     public override IEnumerator RunCommand(Command command)
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Command: " + command.text);
+
+        yield break;
     }
 
     public override IEnumerator RunLine(Line line)

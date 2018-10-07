@@ -10,12 +10,8 @@ public class PlayerController : MonoBehaviour
     public DialogueRunner DialogueRunner;
     public GameObject DialogueTextBox;
     public GameObject MenuBarButtons;
-
-    [SerializeField]
-    private float horizontalSpeed = 10f;
-
-    [SerializeField]
-    private float verticalSpeed = 10f;
+    public GameObject InventoryMenu;
+    public Collider2D PlayerInteractionCollider;
 
     [SerializeField]
     private float mouseMoveSpeed = 10f;
@@ -23,29 +19,47 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float raycastDistance = 25f;
 
+    [SerializeField]
+    private float interactionDistance = 25f;
+
+    [SerializeField]
+    private string tooFarNode;
+
     private Dictionary<MouseMode, Texture2D> MouseCursorDictionary = new Dictionary<MouseMode, Texture2D>();
     private BoxCollider2D playerMoveCollider;
-    [SerializeField]
     private bool stopRight;
-    [SerializeField]
     private bool stopLeft;
-    [SerializeField]
     private bool stopUp;
-    [SerializeField]
     private bool stopDown;
-    [SerializeField]
     private bool keepMoving = true;
     private Vector2 mouseMoveTarget;
     private RaycastHit2D[] results = new RaycastHit2D[5];
     private ContactFilter2D filter = new ContactFilter2D();
 
+    public static PlayerController Instance { get; private set; }
+
+    public List<Interactable> Inventory { get; private set; }
+
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Debug.LogAssertion("Two PlayerControllers present!");
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+
         playerMoveCollider = GetComponent<BoxCollider2D>();
         foreach (MouseModeCursorPair pair in MouseCursors)
         {
             MouseCursorDictionary[pair.Mode] = pair.Cursor;
         }
+        Inventory = new List<Interactable>();
     }
 
     private void Update()
@@ -54,6 +68,11 @@ public class PlayerController : MonoBehaviour
         {
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
             return;
+        }
+
+        if (InventoryMenu.activeInHierarchy && CurrentMouseMode == MouseMode.Walk)
+        {
+            CurrentMouseMode = MouseMode.Look;
         }
 
         Vector3 currentPosition = transform.position;
@@ -66,8 +85,11 @@ public class PlayerController : MonoBehaviour
             switch (CurrentMouseMode)
             {
                 case MouseMode.Walk:
-                    mouseMoveTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    keepMoving = true;
+                    if (!InventoryMenu.activeInHierarchy)
+                    {
+                        mouseMoveTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                        keepMoving = true;
+                    }
                     break;
 
                 default:
@@ -77,7 +99,14 @@ public class PlayerController : MonoBehaviour
                         Interactable interactable = clicked.GetComponent<Interactable>();
                         if (interactable != null)
                         {
-                            interactable.Interact(CurrentMouseMode, DialogueRunner);
+                            if (CanInteract(hit.collider, interactable))
+                            {
+                                interactable.Interact(CurrentMouseMode, DialogueRunner);
+                            }
+                            else
+                            {
+                                DialogueRunner.StartDialogue(tooFarNode);
+                            }
                         }
                     }
                     break;
@@ -108,7 +137,14 @@ public class PlayerController : MonoBehaviour
                     break;
 
                 case MouseMode.Zipper:
-                    CurrentMouseMode = MouseMode.Walk;
+                    if (InventoryMenu.activeInHierarchy)
+                    {
+                        CurrentMouseMode = MouseMode.Look;
+                    }
+                    else
+                    {
+                        CurrentMouseMode = MouseMode.Walk;
+                    }
                     break;
 
                 default:
@@ -138,5 +174,13 @@ public class PlayerController : MonoBehaviour
         stopLeft = playerMoveCollider.Raycast(Vector2.left, filter, results, raycastDistance) > 0;
         stopUp = playerMoveCollider.Raycast(Vector2.up, filter, results, raycastDistance) > 0;
         stopDown = playerMoveCollider.Raycast(Vector2.down, filter, results, raycastDistance) > 0;
+    }
+
+    private bool CanInteract(Collider2D collider, Interactable interactable)
+    {
+        Debug.Log(interactable.InInventoryVariableName);
+        return CurrentMouseMode == MouseMode.Look ||
+            VariableStorage.Instance.GetValue(interactable.InInventoryVariableName).AsBool ||
+            collider.Distance(PlayerInteractionCollider).distance < interactionDistance;
     }
 }

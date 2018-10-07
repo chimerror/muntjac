@@ -236,7 +236,7 @@ MonoBehaviour:
   MouseNodeStrings:
   - Mode: 1
     NodeToRun: Sammy.Look
-  DefaultNode: 
+  DefaultNode: Sammy.Default
 --- !u!114 &114482129432072134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,15 +265,12 @@ MonoBehaviour:
   DialogueRunner: {fileID: 0}
   DialogueTextBox: {fileID: 0}
   MenuBarButtons: {fileID: 0}
-  horizontalSpeed: 10
-  verticalSpeed: 10
+  InventoryMenu: {fileID: 0}
+  PlayerInteractionCollider: {fileID: 61361974435751714}
   mouseMoveSpeed: 10
   raycastDistance: 25
-  stopRight: 0
-  stopLeft: 0
-  stopUp: 0
-  stopDown: 0
-  keepMoving: 1
+  interactionDistance: 25
+  tooFarNode: Sammy.TooFar
 --- !u!212 &212129500986863672
 SpriteRenderer:
   m_ObjectHideFlags: 1

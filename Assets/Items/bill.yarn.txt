@@ -1,8 +1,25 @@
 title: Bill.Look
 ---
-Hey! It's a crisp twenty dollar bill!
+<<if $Bill_is_in_inventory is false>>
+    Hey! It's a crisp twenty dollar bill!
+<<else>>
+    A crisp twenty dollar bill with the serious face of Harriet the Lion on it.
+<<endif>>
 ===
 title: Bill.Default
 ---
-Better grab that bill before someone else does!
+<<if $Bill_is_in_inventory is false>>
+    Better grab that bill before someone else does!
+<<else>>
+    You'd rather not. You don't know where it's been!
+<<endif>>
+===
+title: Bill.Take
+---
+<<if $Bill_is_in_inventory is false>>
+    You swipe the bill before any of these jackalopes have the same idea.
+    <<placeInInventory Bill>>
+<<else>>
+    It feels real, and has the right picture. Probably not counterfeit.
+<<endif>>
 ===
