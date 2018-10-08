@@ -14,6 +14,7 @@ public class Interactable : MonoBehaviour
 
     public MouseModeStringPair[] MouseNodeStrings;
     public string DefaultNode;
+    public Texture2D Cursor;
 
     private Dictionary<MouseMode, string> MouseNodeDictionary = new Dictionary<MouseMode, string>();
 

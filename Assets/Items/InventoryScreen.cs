@@ -20,7 +20,7 @@ public class InventoryScreen : MonoBehaviour
     {
         foreach (Interactable interactable in GetComponentsInChildren<Interactable>())
         {
-            Destroy(interactable);
+            Destroy(interactable.gameObject);
         }
     }
 }

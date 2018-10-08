@@ -237,6 +237,7 @@ MonoBehaviour:
   - Mode: 1
     NodeToRun: Sammy.Look
   DefaultNode: Sammy.Default
+  Cursor: {fileID: 0}
 --- !u!114 &114482129432072134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -262,11 +263,14 @@ MonoBehaviour:
     Cursor: {fileID: 2800000, guid: df3e8193fbb6acd4e90a55db3b53cad1, type: 3}
   - Mode: 5
     Cursor: {fileID: 2800000, guid: 9d83e1cc11592bb4cb4061276020348e, type: 3}
+  - Mode: 6
+    Cursor: {fileID: 0}
   DialogueRunner: {fileID: 0}
   DialogueTextBox: {fileID: 0}
   MenuBarButtons: {fileID: 0}
   InventoryMenu: {fileID: 0}
   PlayerInteractionCollider: {fileID: 61361974435751714}
+  ActiveInventoryItem: {fileID: 0}
   mouseMoveSpeed: 10
   raycastDistance: 25
   interactionDistance: 25

@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public GameObject MenuBarButtons;
     public GameObject InventoryMenu;
     public Collider2D PlayerInteractionCollider;
+    public Interactable ActiveInventoryItem;
 
     [SerializeField]
     private float mouseMoveSpeed = 10f;
@@ -99,7 +100,12 @@ public class PlayerController : MonoBehaviour
                         Interactable interactable = clicked.GetComponent<Interactable>();
                         if (interactable != null)
                         {
-                            if (CanInteract(hit.collider, interactable))
+                            if (CurrentMouseMode == MouseMode.Inventory)
+                            {
+                                ActiveInventoryItem = Inventory.Find(i => i.name == interactable.name);
+                                MouseCursorDictionary[MouseMode.Inventory] = interactable.Cursor;
+                            }
+                            else if (CanInteract(hit.collider, interactable))
                             {
                                 interactable.Interact(CurrentMouseMode, DialogueRunner);
                             }
@@ -137,6 +143,17 @@ public class PlayerController : MonoBehaviour
                     break;
 
                 case MouseMode.Zipper:
+                    if (ActiveInventoryItem != null || InventoryMenu.activeInHierarchy)
+                    {
+                        CurrentMouseMode = MouseMode.Inventory;
+                    }
+                    else
+                    {
+                        CurrentMouseMode = MouseMode.Walk;
+                    }
+                    break;
+
+                case MouseMode.Inventory:
                     if (InventoryMenu.activeInHierarchy)
                     {
                         CurrentMouseMode = MouseMode.Look;
@@ -178,7 +195,6 @@ public class PlayerController : MonoBehaviour
 
     private bool CanInteract(Collider2D collider, Interactable interactable)
     {
-        Debug.Log(interactable.InInventoryVariableName);
         return CurrentMouseMode == MouseMode.Look ||
             VariableStorage.Instance.GetValue(interactable.InInventoryVariableName).AsBool ||
             collider.Distance(PlayerInteractionCollider).distance < interactionDistance;

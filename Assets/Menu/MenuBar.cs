@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class MenuBar : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject MenuButtons;
     public PlayerController Player;
     public GameObject InventoryMenu;
+    public Image ActiveInventoryItemMenu;
+    public Sprite ActiveInventoryItemEmptySprite;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -49,6 +52,14 @@ public class MenuBar : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         Player.CurrentMouseMode = MouseMode.Zipper;
     }
 
+    public void OnActiveInventoryClicked()
+    {
+        if (Player.ActiveInventoryItem != null)
+        {
+            Player.CurrentMouseMode = MouseMode.Inventory;
+        }
+    }
+
     public void OnInventoryClicked()
     {
         InventoryMenu.SetActive(true);
@@ -57,5 +68,20 @@ public class MenuBar : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void OnInventoryCloseClicked()
     {
         InventoryMenu.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (MenuButtons.activeInHierarchy)
+        {
+            if (Player.ActiveInventoryItem != null)
+            {
+                ActiveInventoryItemMenu.sprite = Player.ActiveInventoryItem.GetComponent<SpriteRenderer>().sprite;
+            }
+            else
+            {
+                ActiveInventoryItemMenu.sprite = ActiveInventoryItemEmptySprite;
+            }
+        }
     }
 }
