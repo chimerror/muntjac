@@ -197,6 +197,7 @@ public class PlayerController : MonoBehaviour
     {
         return CurrentMouseMode == MouseMode.Look ||
             VariableStorage.Instance.GetValue(interactable.InInventoryVariableName).AsBool ||
+            collider == PlayerInteractionCollider ||
             collider.Distance(PlayerInteractionCollider).distance < interactionDistance;
     }
 }
