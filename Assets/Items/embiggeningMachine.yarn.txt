@@ -1,0 +1,20 @@
+title: EmbiggeningMachine.Look
+---
+Ah, the Acme Hypermatic 5000 embiggening machine!
+
+You can put in anything and make it 100 times bigger!
+
+Anything!
+===
+title: EmbiggeningMachine.Zipper
+---
+*sigh* Of course that's the first thing you think of.
+
+Let's save it until we have a reason.
+
+You're not sure you want to carry around a big package right now.
+===
+title: EmbiggeningMachine.Default
+---
+That would void the warranty.
+===

@@ -11,5 +11,6 @@ public enum MouseMode
     Taste,
     Speak,
     Zipper,
+    Item,
     Inventory
 }

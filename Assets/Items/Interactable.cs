@@ -11,6 +11,7 @@ using Yarn.Unity;
 public class Interactable : MonoBehaviour
 {
     private const string InInventoryVariableFormat = "${0}_is_in_inventory";
+    private const string ItemApplicationNodeFormat = "{0}.AppliedTo.{1}";
 
     public MouseModeStringPair[] MouseNodeStrings;
     public string DefaultNode;
@@ -43,7 +44,21 @@ public class Interactable : MonoBehaviour
         PlayerController.Instance.Inventory.Add(this);
         gameObject.SetActive(false);
         Yarn.Value value = new Yarn.Value(true);
+        SetInventoryVariable(); // For cases where it's never been awoken.
         VariableStorage.Instance.SetValue(InInventoryVariableName, value);
+    }
+
+    public void UseItem(Interactable item, DialogueRunner dialogueRunner)
+    {
+        string itemApplicationNode = string.Format(ItemApplicationNodeFormat, item.name, name);
+        if (dialogueRunner.NodeExists(itemApplicationNode))
+        {
+            dialogueRunner.StartDialogue(itemApplicationNode);
+        }
+        else
+        {
+            dialogueRunner.StartDialogue(DefaultNode);
+        }
     }
 
     private void Awake()
@@ -52,6 +67,12 @@ public class Interactable : MonoBehaviour
         {
             MouseNodeDictionary[pair.Mode] = pair.NodeToRun;
         }
+        InInventoryVariableName = string.Format(InInventoryVariableFormat, name);
+        SetInventoryVariable();
+    }
+
+    private void SetInventoryVariable()
+    {
         InInventoryVariableName = string.Format(InInventoryVariableFormat, name);
     }
 }

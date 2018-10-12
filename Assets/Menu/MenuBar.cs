@@ -56,7 +56,7 @@ public class MenuBar : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         if (Player.ActiveInventoryItem != null)
         {
-            Player.CurrentMouseMode = MouseMode.Inventory;
+            Player.CurrentMouseMode = MouseMode.Item;
         }
     }
 

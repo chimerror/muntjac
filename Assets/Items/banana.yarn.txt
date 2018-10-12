@@ -1,0 +1,29 @@
+title: Banana.Look
+---
+It's an... ew... open banana.
+===
+title: Banana.Take
+---
+<<if $Banana_is_in_inventory is false>>
+    Do you really want a banana in your pocket that bad?
+
+    You realize that normally that's innuendo for something...
+
+    *sigh* OK, you're the boss.
+    <<placeInInventory Banana>>
+<<else>>
+    Quit playing with the banana in your pocket.
+<<endif>>
+===
+title: Banana.Default
+---
+<<if $Banana_is_in_inventory is false>>
+    Ew! No!
+<<else>>
+    Quit playing with the banana in your pocket.
+<<endif>>
+===
+title: Banana.AppliedTo.EmbiggeningMachine
+---
+The banana in your pocket is fine just the way it is, honey.
+===

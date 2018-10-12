@@ -265,15 +265,20 @@ MonoBehaviour:
     Cursor: {fileID: 2800000, guid: 9d83e1cc11592bb4cb4061276020348e, type: 3}
   - Mode: 6
     Cursor: {fileID: 0}
+  - Mode: 7
+    Cursor: {fileID: 0}
   DialogueRunner: {fileID: 0}
   DialogueTextBox: {fileID: 0}
   MenuBarButtons: {fileID: 0}
   InventoryMenu: {fileID: 0}
   PlayerInteractionCollider: {fileID: 61361974435751714}
   ActiveInventoryItem: {fileID: 0}
+  OutOfWorldInventoryItemPairs:
+  - PrefabName: BigBill
+    Prefab: {fileID: 114022148966589440, guid: 25f13fb9cfa823c42a55deab5f7dab4b, type: 2}
   mouseMoveSpeed: 10
   raycastDistance: 25
-  interactionDistance: 25
+  interactionDistance: 50
   tooFarNode: Sammy.TooFar
 --- !u!212 &212129500986863672
 SpriteRenderer:

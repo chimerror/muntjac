@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public GameObject InventoryMenu;
     public Collider2D PlayerInteractionCollider;
     public Interactable ActiveInventoryItem;
+    public StringInteractablePair[] OutOfWorldInventoryItemPairs;
 
     [SerializeField]
     private float mouseMoveSpeed = 10f;
@@ -24,7 +25,7 @@ public class PlayerController : MonoBehaviour
     private float interactionDistance = 25f;
 
     [SerializeField]
-    private string tooFarNode;
+    private string tooFarNode = null;
 
     private Dictionary<MouseMode, Texture2D> MouseCursorDictionary = new Dictionary<MouseMode, Texture2D>();
     private BoxCollider2D playerMoveCollider;
@@ -41,6 +42,8 @@ public class PlayerController : MonoBehaviour
 
     public List<Interactable> Inventory { get; private set; }
 
+    public Dictionary<string, Interactable> OutOfWorldInventoryItems { get; private set; }
+
     private void Awake()
     {
         if (Instance == null)
@@ -56,11 +59,19 @@ public class PlayerController : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         playerMoveCollider = GetComponent<BoxCollider2D>();
+
         foreach (MouseModeCursorPair pair in MouseCursors)
         {
             MouseCursorDictionary[pair.Mode] = pair.Cursor;
         }
+
         Inventory = new List<Interactable>();
+
+        OutOfWorldInventoryItems = new Dictionary<string, Interactable>();
+        foreach (StringInteractablePair pair in OutOfWorldInventoryItemPairs)
+        {
+            OutOfWorldInventoryItems[pair.PrefabName] = pair.Prefab;
+        }
     }
 
     private void Update()
@@ -102,8 +113,25 @@ public class PlayerController : MonoBehaviour
                         {
                             if (CurrentMouseMode == MouseMode.Inventory)
                             {
-                                ActiveInventoryItem = Inventory.Find(i => i.name == interactable.name);
-                                MouseCursorDictionary[MouseMode.Inventory] = interactable.Cursor;
+                                Interactable inventoryVersion = Inventory.Find(i => i.name == interactable.name);
+                                if (inventoryVersion != null)
+                                {
+                                    ActiveInventoryItem = inventoryVersion;
+                                    MouseCursorDictionary[MouseMode.Item] = interactable.Cursor;
+                                    CurrentMouseMode = MouseMode.Item;
+                                }
+                            }
+                            else if (CurrentMouseMode == MouseMode.Item)
+                            {
+                                Debug.Assert(ActiveInventoryItem != null);
+                                if (CanInteract(hit.collider, interactable))
+                                {
+                                    interactable.UseItem(ActiveInventoryItem, DialogueRunner);
+                                }
+                                else
+                                {
+                                    DialogueRunner.StartDialogue(tooFarNode);
+                                }
                             }
                             else if (CanInteract(hit.collider, interactable))
                             {
@@ -143,7 +171,22 @@ public class PlayerController : MonoBehaviour
                     break;
 
                 case MouseMode.Zipper:
-                    if (ActiveInventoryItem != null || InventoryMenu.activeInHierarchy)
+                    if (ActiveInventoryItem != null)
+                    {
+                        CurrentMouseMode = MouseMode.Item;
+                    }
+                    else if (InventoryMenu.activeInHierarchy)
+                    {
+                        CurrentMouseMode = MouseMode.Inventory;
+                    }
+                    else
+                    {
+                        CurrentMouseMode = MouseMode.Walk;
+                    }
+                    break;
+
+                case MouseMode.Item:
+                    if (InventoryMenu.activeInHierarchy)
                     {
                         CurrentMouseMode = MouseMode.Inventory;
                     }

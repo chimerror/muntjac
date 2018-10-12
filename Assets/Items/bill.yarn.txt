@@ -23,3 +23,18 @@ title: Bill.Take
     It feels real, and has the right picture. Probably not counterfeit.
 <<endif>>
 ===
+title: Bill.AppliedTo.Bouncer
+---
+The bouncer snarls. "You're gonna need way more than that, pal."
+===
+title: Bill.AppliedTo.EmbiggeningMachine
+---
+You slip the bill into the embiggening machine...
+<<removeFromInventory Bill>>
+Huh! It didn't make the bill any larger...
+
+It seems to have made it bigger in denomination!
+
+That means it's worth more, Sammy.
+<<placeInInventory BigBill>>
+===

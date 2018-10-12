@@ -1,0 +1,26 @@
+title: BigBill.Look
+---
+A crisp uh, two thousand dollar bill with the rarely-seen face of Chase the Salmon on it.
+===
+title: BigBill.Default
+---
+This bill is already sketchy enough as it is...
+===
+title: BigBill.Touch
+---
+It feels like a real bill... And maybe the picture is right? Maybe not counterfeit?
+
+You resolve to get in touch with your attorneys Dewey, Cheatham, and Howe when the chance arises.
+===
+title: BigBill.AppliedTo.EmbiggeningMachine
+---
+It's big enough and likely illegal as is.
+===
+title: BigBill.AppliedTo.Bouncer
+---
+The bouncer looks the bill over with a confused expression.
+
+"Huh, that's... big enough, pal. Come in."
+
+(That's all the game she wrote!)
+===
