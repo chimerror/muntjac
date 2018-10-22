@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 mouseMoveTarget;
     private RaycastHit2D[] results = new RaycastHit2D[5];
     private ContactFilter2D filter = new ContactFilter2D();
+    private Animator animator = null;
 
     public static PlayerController Instance { get; private set; }
 
@@ -59,6 +60,8 @@ public class PlayerController : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         playerMoveCollider = GetComponent<BoxCollider2D>();
+
+        animator = GetComponent<Animator>();
 
         foreach (MouseModeCursorPair pair in MouseCursors)
         {
@@ -218,12 +221,20 @@ public class PlayerController : MonoBehaviour
         if (keepMoving && (Vector2)transform.position != mouseMoveTarget)
         {
             Vector2 desiredPosition = Vector2.MoveTowards(transform.position, mouseMoveTarget, mouseMoveSpeed);
+            Vector2 movementDirection = desiredPosition - (Vector2)transform.position;
+            float movementAngle = Vector2.SignedAngle(Vector2.right, movementDirection);
+            animator.SetFloat("WalkingAngle", movementAngle);
+            animator.SetFloat("WalkingSpeed", movementDirection.magnitude);
             transform.position = desiredPosition;
             if (stopRight || stopLeft || stopUp || stopDown)
             {
                 transform.position = currentPosition;
                 keepMoving = false;
             }
+        }
+        else
+        {
+            animator.SetFloat("WalkingSpeed", 0);
         }
     }
 
