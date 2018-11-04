@@ -1,0 +1,28 @@
+title: ClubPredDoor.Look
+---
+The front door to Club Pred, the hippest predator dance club in town.
+
+At least, you think it's a dance club...
+===
+title: ClubPredDoor.Touch
+---
+Just WALK through it.
+===
+title: ClubPredDoor.Zipper
+---
+That's public property, Sammy!
+
+Don't mess it up with your privateness!
+===
+title: ClubPredDoor.Default
+---
+Nah.
+===
+title: ClubPredDoor.Walk
+---
+<<moveToNextScene ClubPred>>
+===
+title: ClubPredDoor2.Walk
+---
+<<moveToNextScene Toontown>>
+===

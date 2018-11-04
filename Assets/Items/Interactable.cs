@@ -67,8 +67,16 @@ public class Interactable : MonoBehaviour
         {
             MouseNodeDictionary[pair.Mode] = pair.NodeToRun;
         }
-        InInventoryVariableName = string.Format(InInventoryVariableFormat, name);
         SetInventoryVariable();
+    }
+
+    private void Start()
+    {
+        var currentValue = VariableStorage.Instance.GetValue(InInventoryVariableName);
+        if (currentValue != null && currentValue.AsBool && gameObject.transform.parent == null)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void SetInventoryVariable()

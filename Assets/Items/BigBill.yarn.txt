@@ -22,5 +22,5 @@ The bouncer looks the bill over with a confused expression.
 
 "Huh, that's... big enough, pal. Come in."
 
-(That's all the game she wrote!)
+<<disable Bouncer>>
 ===

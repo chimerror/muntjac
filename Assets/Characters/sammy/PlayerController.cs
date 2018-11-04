@@ -45,6 +45,11 @@ public class PlayerController : MonoBehaviour
 
     public Dictionary<string, Interactable> OutOfWorldInventoryItems { get; private set; }
 
+    public void SetMouseTarget(Transform transform)
+    {
+        mouseMoveTarget = transform.position;
+    }
+
     private void Awake()
     {
         if (Instance == null)
@@ -96,11 +101,21 @@ public class PlayerController : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
+            GameObject clicked = hit.collider != null ? hit.transform.gameObject : null;
+            Interactable interactable = clicked != null ? clicked.GetComponent<Interactable>() : null;
 
             switch (CurrentMouseMode)
             {
                 case MouseMode.Walk:
-                    if (!InventoryMenu.activeInHierarchy)
+                    if (interactable != null)
+                    {
+                        if (!interactable.Interact(CurrentMouseMode, DialogueRunner))
+                        {
+                            mouseMoveTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                            keepMoving = true;
+                        }
+                    }
+                    else if (!InventoryMenu.activeInHierarchy)
                     {
                         mouseMoveTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                         keepMoving = true;
@@ -110,8 +125,6 @@ public class PlayerController : MonoBehaviour
                 default:
                     if (hit.collider != null)
                     {
-                        GameObject clicked = hit.transform.gameObject;
-                        Interactable interactable = clicked.GetComponent<Interactable>();
                         if (interactable != null)
                         {
                             if (CurrentMouseMode == MouseMode.Inventory)

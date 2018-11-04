@@ -1,6 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Yarn;
 
 public class DialogueController : Yarn.Unity.DialogueUIBehaviour
@@ -32,6 +32,27 @@ public class DialogueController : Yarn.Unity.DialogueUIBehaviour
                         PlayerController.Instance.CurrentMouseMode = MouseMode.Walk;
                     }
                 }
+                break;
+
+            case "moveToNextScene":
+                string lastScene = SceneManager.GetActiveScene().name;
+                AsyncOperation loadOperation = SceneManager.LoadSceneAsync(splitCommand[1]);
+
+                while (!loadOperation.isDone)
+                {
+                    yield return null;
+                }
+
+                string spawnPointName = string.Format("{0}.SpawnPoint", lastScene);
+                Debug.Log(spawnPointName);
+                var spawnPoint = GameObject.Find(spawnPointName);
+                PlayerController.Instance.transform.position = spawnPoint.transform.position;
+                PlayerController.Instance.SetMouseTarget(spawnPoint.transform);
+                break;
+
+            case "disable":
+                var objectToDisable = GameObject.Find(splitCommand[1]);
+                objectToDisable.SetActive(false);
                 break;
 
             default:
