@@ -295,31 +295,6 @@ Prefab:
       propertyPath: InventoryMenu
       value: 
       objectReference: {fileID: 2050785666}
-    - target: {fileID: 61084060368007950, guid: 1c9e39019063e264fbe72f722b98dea5,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 61084060368007950, guid: 1c9e39019063e264fbe72f722b98dea5,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 43
-      objectReference: {fileID: 0}
-    - target: {fileID: 61361974435751714, guid: 1c9e39019063e264fbe72f722b98dea5,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 61361974435751714, guid: 1c9e39019063e264fbe72f722b98dea5,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 170
-      objectReference: {fileID: 0}
-    - target: {fileID: 61361974435751714, guid: 1c9e39019063e264fbe72f722b98dea5,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 195
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c9e39019063e264fbe72f722b98dea5, type: 2}
   m_IsPrefabAsset: 0
@@ -1488,29 +1463,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 654896176}
   m_CullTransparentMesh: 0
---- !u!1 &659816573 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1143019844477798, guid: 1c9e39019063e264fbe72f722b98dea5,
-    type: 2}
-  m_PrefabInternal: {fileID: 56870296}
---- !u!95 &659816574
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 659816573}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2e40af81e7365d3419fe7e5b65b69dc7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!20 &672247776 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 20784623967066250, guid: 1c9e39019063e264fbe72f722b98dea5,

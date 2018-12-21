@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 61084060368007950}
   - component: {fileID: 50451928112995240}
   - component: {fileID: 114290801677316844}
+  - component: {fileID: 95134699837263452}
   m_Layer: 0
   m_Name: Sammy
   m_TagString: Untagged
@@ -177,18 +178,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3, y: -85}
+  m_Offset: {x: 0, y: -85}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 266, y: 288}
-    newSize: {x: 266, y: 288}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 256, y: 256}
+    newSize: {x: 256, y: 256}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 85, y: 85}
+  m_Size: {x: 100, y: 85}
   m_EdgeRadius: 0
 --- !u!61 &61361974435751714
 BoxCollider2D:
@@ -202,7 +203,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3, y: 42.5}
+  m_Offset: {x: 0, y: 40}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -213,7 +214,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 85, y: 170}
+  m_Size: {x: 100, y: 165}
   m_EdgeRadius: 0
 --- !u!81 &81628488970088384
 AudioListener:
@@ -222,6 +223,24 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1165115482500296}
   m_Enabled: 1
+--- !u!95 &95134699837263452
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143019844477798}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9580fe6a3bcb72f41b4bb36d351a4464, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114290801677316844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -315,12 +334,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 7b9342db2c1d39c43b3e3f29005de829, type: 3}
+  m_Sprite: {fileID: 21300132, guid: 93ac363c2bf0eca40bf5f23c930235c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 266, y: 288}
+  m_Size: {x: 256, y: 256}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
