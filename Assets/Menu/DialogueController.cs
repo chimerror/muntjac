@@ -55,6 +55,18 @@ public class DialogueController : Yarn.Unity.DialogueUIBehaviour
                 objectToDisable.SetActive(false);
                 break;
 
+            case "animate":
+                var objectToAnimate = GameObject.Find(splitCommand[1]);
+                var animator = objectToAnimate.GetComponent<Animator>();
+                string animationName = string.Format("{0}Trigger", splitCommand[2]);
+                animator.SetTrigger(animationName);
+                break;
+
+            case "pause":
+                var time = float.Parse(splitCommand[1]);
+                yield return new WaitForSeconds(time);
+                break;
+
             default:
                 Debug.LogAssertion("Unknown command!");
                 break;

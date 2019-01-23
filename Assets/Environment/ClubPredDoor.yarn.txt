@@ -21,6 +21,18 @@ Nah.
 title: ClubPredDoor.Walk
 ---
 <<moveToNextScene ClubPred>>
+<<if visited("ClubPredDoor.Walk") is false>>
+    As you enter the illustrious Club Pred, you scan the room...
+
+    Your eyes settle on the toon at the center table...
+
+    <<animate Sammy HubbaHubba>>
+    <<pause 5>>
+
+    Well, that person seems interesting.
+
+    I think you should take a closer look...
+<<endif>>
 ===
 title: ClubPredDoor2.Walk
 ---

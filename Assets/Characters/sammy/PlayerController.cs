@@ -231,7 +231,7 @@ public class PlayerController : MonoBehaviour
 
         Cursor.SetCursor(MouseCursorDictionary[CurrentMouseMode], Vector2.zero, CursorMode.Auto);
 
-        if (keepMoving && (Vector2)transform.position != mouseMoveTarget)
+        if (keepMoving && !Mathf.Approximately(Vector2.Distance((Vector2)transform.position, mouseMoveTarget), 0f))
         {
             Vector2 desiredPosition = Vector2.MoveTowards(transform.position, mouseMoveTarget, mouseMoveSpeed);
             Vector2 movementDirection = desiredPosition - (Vector2)transform.position;
