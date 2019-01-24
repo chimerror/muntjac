@@ -53,6 +53,11 @@ public class DialogueController : Yarn.Unity.DialogueUIBehaviour
             case "disable":
                 var objectToDisable = GameObject.Find(splitCommand[1]);
                 objectToDisable.SetActive(false);
+                var interactable = objectToDisable.GetComponent<Interactable>();
+                if (interactable != null)
+                {
+                    interactable.SetDisabledVariable(true);
+                }
                 break;
 
             case "animate":

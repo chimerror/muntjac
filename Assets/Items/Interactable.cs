@@ -11,6 +11,7 @@ using Yarn.Unity;
 public class Interactable : MonoBehaviour
 {
     private const string InInventoryVariableFormat = "${0}_is_in_inventory";
+    private const string DisabledVariableFormat = "${0}_is_disabled";
     private const string ItemApplicationNodeFormat = "{0}.AppliedTo.{1}";
 
     public MouseModeStringPair[] MouseNodeStrings;
@@ -20,6 +21,8 @@ public class Interactable : MonoBehaviour
     private Dictionary<MouseMode, string> MouseNodeDictionary = new Dictionary<MouseMode, string>();
 
     public string InInventoryVariableName { get; private set; }
+
+    public string DisabledVariableName { get; private set; }
 
     public bool Interact(MouseMode mouseMode, DialogueRunner dialogueRunner)
     {
@@ -44,7 +47,7 @@ public class Interactable : MonoBehaviour
         PlayerController.Instance.Inventory.Add(this);
         gameObject.SetActive(false);
         Yarn.Value value = new Yarn.Value(true);
-        SetInventoryVariable(); // For cases where it's never been awoken.
+        SetVariables(); // For cases where it's never been awoken.
         VariableStorage.Instance.SetValue(InInventoryVariableName, value);
     }
 
@@ -61,26 +64,40 @@ public class Interactable : MonoBehaviour
         }
     }
 
+    public void SetDisabledVariable(bool desiredValue)
+    {
+        Yarn.Value value = new Yarn.Value(desiredValue);
+        SetVariables(); // For cases where it's never been awoken.
+        VariableStorage.Instance.SetValue(DisabledVariableName, value);
+    }
+
     private void Awake()
     {
         foreach (MouseModeStringPair pair in MouseNodeStrings)
         {
             MouseNodeDictionary[pair.Mode] = pair.NodeToRun;
         }
-        SetInventoryVariable();
+        SetVariables();
     }
 
     private void Start()
     {
-        var currentValue = VariableStorage.Instance.GetValue(InInventoryVariableName);
-        if (currentValue != null && currentValue.AsBool && gameObject.transform.parent == null)
+        var currentInventoryValue = VariableStorage.Instance.GetValue(InInventoryVariableName);
+        if (currentInventoryValue != null && currentInventoryValue.AsBool && gameObject.transform.parent == null)
+        {
+            Destroy(gameObject);
+        }
+
+        var currentDisabledValue = VariableStorage.Instance.GetValue(DisabledVariableName);
+        if (currentDisabledValue != null && currentDisabledValue.AsBool && gameObject.transform.parent == null)
         {
             Destroy(gameObject);
         }
     }
 
-    private void SetInventoryVariable()
+    private void SetVariables()
     {
         InInventoryVariableName = string.Format(InInventoryVariableFormat, name);
+        DisabledVariableName = string.Format(DisabledVariableFormat, name);
     }
 }
