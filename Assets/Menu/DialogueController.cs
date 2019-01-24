@@ -69,7 +69,9 @@ public class DialogueController : Yarn.Unity.DialogueUIBehaviour
 
             case "pause":
                 var time = float.Parse(splitCommand[1]);
+                PlayerController.Instance.PauseInput();
                 yield return new WaitForSeconds(time);
+                PlayerController.Instance.ResumeInput();
                 break;
 
             default:

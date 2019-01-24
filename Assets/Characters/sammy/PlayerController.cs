@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private string tooFarNode = null;
 
+    private bool pauseInput = false;
     private Dictionary<MouseMode, Texture2D> MouseCursorDictionary = new Dictionary<MouseMode, Texture2D>();
     private BoxCollider2D playerMoveCollider;
     private bool stopRight;
@@ -44,6 +45,16 @@ public class PlayerController : MonoBehaviour
     public List<Interactable> Inventory { get; private set; }
 
     public Dictionary<string, Interactable> OutOfWorldInventoryItems { get; private set; }
+
+    public void PauseInput()
+    {
+        pauseInput = true;
+    }
+
+    public void ResumeInput()
+    {
+        pauseInput = false;
+    }
 
     public void SetMouseTarget(Transform transform)
     {
@@ -84,7 +95,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (DialogueTextBox.activeInHierarchy || MenuBarButtons.activeInHierarchy)
+        if (DialogueTextBox.activeInHierarchy || MenuBarButtons.activeInHierarchy || pauseInput)
         {
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
             return;
