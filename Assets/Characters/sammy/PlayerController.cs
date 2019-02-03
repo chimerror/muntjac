@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public MouseModeCursorPair[] MouseCursors;
     public DialogueRunner DialogueRunner;
     public GameObject DialogueTextBox;
+    public MenuBar MenuBar;
     public GameObject MenuBarButtons;
     public GameObject InventoryMenu;
     public Collider2D PlayerInteractionCollider;
@@ -27,6 +28,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private string tooFarNode = null;
 
+    private SpriteRenderer spriteRenderer = null;
+    private bool isInCloseup = false;
     private bool pauseInput = false;
     private Dictionary<MouseMode, Texture2D> MouseCursorDictionary = new Dictionary<MouseMode, Texture2D>();
     private BoxCollider2D playerMoveCollider;
@@ -61,6 +64,28 @@ public class PlayerController : MonoBehaviour
         mouseMoveTarget = transform.position;
     }
 
+    public void SwitchToCloseupMode()
+    {
+        transform.position = Vector2.zero;
+        mouseMoveTarget = Vector2.zero;
+        spriteRenderer.enabled = false;
+        PlayerInteractionCollider.enabled = false;
+        isInCloseup = true;
+        MenuBar.SwitchToCloseupMode();
+    }
+
+    public void SwitchFromCloseupMode()
+    {
+        PlayerInteractionCollider.enabled = true;
+        spriteRenderer.enabled = true;
+        isInCloseup = false;
+        var nextSceneObject = GameObject.Find("NextScene");
+        var nextScene = nextSceneObject.GetComponent<NextScene>();
+        DialogueRunner.StartDialogue(string.Format("{0}.Walk", nextScene.sceneName));
+        MenuBar.SwitchToNormalMode();
+        CurrentMouseMode = MouseMode.Walk;
+    }
+
     private void Awake()
     {
         if (Instance == null)
@@ -74,6 +99,8 @@ public class PlayerController : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         playerMoveCollider = GetComponent<BoxCollider2D>();
 
@@ -106,6 +133,11 @@ public class PlayerController : MonoBehaviour
             CurrentMouseMode = MouseMode.Look;
         }
 
+        if (isInCloseup && CurrentMouseMode == MouseMode.Walk)
+        {
+            CurrentMouseMode = MouseMode.ExitCloseup;
+        }
+
         Vector3 currentPosition = transform.position;
 
         if (Input.GetMouseButtonDown(0))
@@ -131,6 +163,10 @@ public class PlayerController : MonoBehaviour
                         mouseMoveTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                         keepMoving = true;
                     }
+                    break;
+
+                case MouseMode.ExitCloseup:
+                    SwitchFromCloseupMode();
                     break;
 
                 default:
@@ -234,6 +270,10 @@ public class PlayerController : MonoBehaviour
                     }
                     break;
 
+                case MouseMode.ExitCloseup:
+                    CurrentMouseMode = MouseMode.Look;
+                    break;
+
                 default:
                     Debug.LogError("Unknown Mouse Mode!");
                     break;
@@ -274,6 +314,7 @@ public class PlayerController : MonoBehaviour
     private bool CanInteract(Collider2D collider, Interactable interactable)
     {
         return CurrentMouseMode == MouseMode.Look ||
+            isInCloseup == true ||
             VariableStorage.Instance.GetValue(interactable.InInventoryVariableName).AsBool ||
             collider == PlayerInteractionCollider ||
             collider.Distance(PlayerInteractionCollider).distance < interactionDistance;

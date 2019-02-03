@@ -1,0 +1,8 @@
+title: Rabbit.Look
+---
+Ooh, there's a nice rabbit!
+===
+title: Rabbit.Default
+---
+That rabbit seems cute.
+===

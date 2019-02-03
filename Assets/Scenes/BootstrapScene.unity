@@ -248,6 +248,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1143019844477798, guid: 1c9e39019063e264fbe72f722b98dea5, type: 3}
+      propertyPath: m_Name
+      value: Sammy
+      objectReference: {fileID: 0}
     - target: {fileID: 4157956884442066, guid: 1c9e39019063e264fbe72f722b98dea5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -280,6 +284,18 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4157956884442066, guid: 1c9e39019063e264fbe72f722b98dea5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157956884442066, guid: 1c9e39019063e264fbe72f722b98dea5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157956884442066, guid: 1c9e39019063e264fbe72f722b98dea5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114482129432072134, guid: 1c9e39019063e264fbe72f722b98dea5,
         type: 3}
       propertyPath: DialogueRunner
@@ -300,6 +316,11 @@ PrefabInstance:
       propertyPath: InventoryMenu
       value: 
       objectReference: {fileID: 2050785666}
+    - target: {fileID: 114482129432072134, guid: 1c9e39019063e264fbe72f722b98dea5,
+        type: 3}
+      propertyPath: MenuBar
+      value: 
+      objectReference: {fileID: 1519545587}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c9e39019063e264fbe72f722b98dea5, type: 3}
 --- !u!1 &110998728
@@ -1606,6 +1627,7 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 2a59b612c83603b49a4d6544e8d96946, type: 3}
   - {fileID: 4900000, guid: 6546836f55a896f4fad5102ec3ef6d53, type: 3}
   - {fileID: 4900000, guid: 8cc70b67796c7c14499bc27e54364d43, type: 3}
+  - {fileID: 4900000, guid: 1bbdd509ac1749b4a81624825dda2da1, type: 3}
   stringGroups: []
   shouldOverrideLanguage: 0
   overrideLanguage: 10
@@ -4958,6 +4980,9 @@ MonoBehaviour:
   ActiveInventoryItemMenu: {fileID: 2094759876}
   ActiveInventoryItemEmptySprite: {fileID: 21300000, guid: 9969aeb8f1088ba4ea0c4cc54a3b1f78,
     type: 3}
+  WalkMenuButton: {fileID: 592417285}
+  WalkSprite: {fileID: 21300000, guid: 855d31060ec7ac44ab91221d4f67899d, type: 3}
+  ExitCloseupSprite: {fileID: 21300000, guid: 2331f1e14b61fe046b1018b2bae2e7b6, type: 3}
 --- !u!114 &1519545588
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,6 +11,9 @@ public class MenuBar : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public GameObject InventoryMenu;
     public Image ActiveInventoryItemMenu;
     public Sprite ActiveInventoryItemEmptySprite;
+    public Image WalkMenuButton;
+    public Sprite WalkSprite;
+    public Sprite ExitCloseupSprite;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -20,6 +23,16 @@ public class MenuBar : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void OnPointerExit(PointerEventData eventData)
     {
         MenuButtons.SetActive(false);
+    }
+
+    public void SwitchToNormalMode()
+    {
+        WalkMenuButton.sprite = WalkSprite;
+    }
+
+    public void SwitchToCloseupMode()
+    {
+        WalkMenuButton.sprite = ExitCloseupSprite;
     }
 
     public void OnWalkClicked()

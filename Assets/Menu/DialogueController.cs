@@ -50,6 +50,17 @@ public class DialogueController : Yarn.Unity.DialogueUIBehaviour
                 PlayerController.Instance.SetMouseTarget(spawnPoint.transform);
                 break;
 
+            case "moveToCloseup":
+                string returnScene = SceneManager.GetActiveScene().name;
+                AsyncOperation loadCloseUpOperation = SceneManager.LoadSceneAsync(splitCommand[1]);
+
+                while (!loadCloseUpOperation.isDone)
+                {
+                    yield return null;
+                }
+                PlayerController.Instance.SwitchToCloseupMode();
+                break;
+
             case "disable":
                 var objectToDisable = GameObject.Find(splitCommand[1]);
                 objectToDisable.SetActive(false);

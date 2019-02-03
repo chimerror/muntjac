@@ -12,5 +12,6 @@ public enum MouseMode
     Speak,
     Zipper,
     Item,
-    Inventory
+    Inventory,
+    ExitCloseup
 }

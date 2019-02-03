@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ClubPred.unity
     guid: ff55e35399046c741be10342761ef293
+  - enabled: 1
+    path: Assets/Scenes/ClubPredCloseup.unity
+    guid: 7533386418c248d43acf0916e857118e
   m_configObjects: {}
