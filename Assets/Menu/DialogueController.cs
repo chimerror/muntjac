@@ -1,13 +1,18 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Yarn;
 
 public class DialogueController : Yarn.Unity.DialogueUIBehaviour
 {
     public GameObject DialogueBox;
+    public GameObject ConversationBox;
+    public GameObject ConversationOptions;
+    public Button OptionPrefab;
 
     private SuperTextMesh textMesh;
+    private Yarn.OptionChooser SetSelectedOption;
 
     public override IEnumerator RunCommand(Command command)
     {
@@ -109,7 +114,47 @@ public class DialogueController : Yarn.Unity.DialogueUIBehaviour
 
     public override IEnumerator RunOptions(Options optionsCollection, OptionChooser optionChooser)
     {
-        throw new System.NotImplementedException();
+        ConversationBox.SetActive(true);
+        int childCount = ConversationOptions.transform.childCount;
+        for (int currentChild = childCount - 1; currentChild >= 0; currentChild--)
+        {
+            var childObject = ConversationOptions.transform.GetChild(currentChild).gameObject;
+            Destroy(childObject);
+        }
+
+        for (int currentOption = 0; currentOption < optionsCollection.options.Count; currentOption++)
+        {
+            var option = optionsCollection.options[currentOption];
+            var optionButton = Instantiate(OptionPrefab);
+            optionButton.transform.SetParent(ConversationOptions.transform, false);
+            optionButton.enabled = true;
+            var optionText = optionButton.GetComponentInChildren<Text>();
+            optionText.text = option;
+            optionText.enabled = true;
+            var optionImage = optionButton.GetComponent<Image>();
+            optionImage.enabled = true;
+            SetSelectedOption = optionChooser;
+
+            int selectedOption = currentOption;
+            optionButton.onClick.AddListener(() =>
+            {
+                ConversationBox.SetActive(false);
+                optionChooser(selectedOption);
+                SetSelectedOption = null;
+            });
+        }
+
+        while (SetSelectedOption != null)
+        {
+            yield return null;
+        }
+    }
+
+    private void SetOption(int selectedOption, OptionChooser optionChooser)
+    {
+        Debug.Log(selectedOption);
+        optionChooser(selectedOption);
+        SetSelectedOption = null;
     }
 
     private void Awake()

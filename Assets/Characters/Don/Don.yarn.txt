@@ -1,0 +1,34 @@
+title: Don.Look
+---
+<<moveToCloseup DonCloseup>>
+===
+title: Don.Speak
+---
+<<moveToCloseup DonCloseup>>
+===
+title: Don.Default
+---
+Try LOOKing at him or SPEAKing at him.
+===
+title: DonCloseup.Default
+---
+He has a rather "Look, Don't Touch" look.
+===
+title: DonCloseup.Speak
+---
+<<if visited("DonCloseup.Speak") is false>>
+    -> Hi, uh... you look cool
+        "Thanks. You look delicious."
+        Wow, you were feeling pretty low about your looks!
+        At least you think that was about your looks...
+    -> Hi, I'm Sammi!
+        "Nice to meet you, Sammi. You look delicious."
+        Wow, you were feeling pretty low about your looks!
+        At least you think that was about your looks...
+    -> Too scared!
+        "Hey, skunk. You look delicious."
+        Wow, you were feeling pretty low about your looks!
+        At least you think that was about your looks...
+<<endif>>
+That's all she wrote.
+===

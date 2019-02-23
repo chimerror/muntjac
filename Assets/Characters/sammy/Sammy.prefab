@@ -177,6 +177,8 @@ MonoBehaviour:
     Cursor: {fileID: 2800000, guid: 7ab65ce5cc85990498a3f71d5eb9efd4, type: 3}
   DialogueRunner: {fileID: 0}
   DialogueTextBox: {fileID: 0}
+  ConversationBox: {fileID: 0}
+  MenuBar: {fileID: 0}
   MenuBarButtons: {fileID: 0}
   InventoryMenu: {fileID: 0}
   PlayerInteractionCollider: {fileID: 61361974435751714}

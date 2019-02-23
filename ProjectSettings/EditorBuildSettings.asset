@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ClubPredCloseup.unity
     guid: 7533386418c248d43acf0916e857118e
+  - enabled: 1
+    path: Assets/Scenes/DonCloseup.unity
+    guid: 6ec27c7e6d455d94980cca1ab49d0090
   m_configObjects: {}

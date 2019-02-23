@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public MouseModeCursorPair[] MouseCursors;
     public DialogueRunner DialogueRunner;
     public GameObject DialogueTextBox;
+    public GameObject ConversationBox;
     public MenuBar MenuBar;
     public GameObject MenuBarButtons;
     public GameObject InventoryMenu;
@@ -122,7 +123,10 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (DialogueTextBox.activeInHierarchy || MenuBarButtons.activeInHierarchy || pauseInput)
+        if (DialogueTextBox.activeInHierarchy ||
+            MenuBarButtons.activeInHierarchy ||
+            ConversationBox.activeInHierarchy ||
+            pauseInput)
         {
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
             return;
