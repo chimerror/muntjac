@@ -1,0 +1,469 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<ScappleDocument ID="03C347BB-4388-47D3-B828-9FD30C7AFB21" Version="1.1">
+   <Notes>
+      <Note Width="108.301" FontSize="12" ID="0" Position="511.8,929.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Don the Smilodon</String>
+         <ConnectedNoteIDs>16-17, 34, 36, 38</ConnectedNoteIDs>
+      </Note>
+      <Note Width="86.6211" FontSize="12" ID="1" Position="782.9,910.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Julia the Kaiju</String>
+         <ConnectedNoteIDs>16, 18, 22, 24, 47</ConnectedNoteIDs>
+      </Note>
+      <Note Width="94.3359" FontSize="12" ID="2" Position="1022.7,942.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Tay the Pooltoy</String>
+         <ConnectedNoteIDs>16, 19-21, 32</ConnectedNoteIDs>
+      </Note>
+      <Note Width="133.203" FontSize="12" ID="3" Position="457.1,634.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Bouncer for Club Pred</String>
+         <ConnectedNoteIDs>7, 17</ConnectedNoteIDs>
+      </Note>
+      <Note Width="124.39" FontSize="12" ID="4" Position="709.4,636.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Bouncer for Sizeplay</String>
+         <ConnectedNoteIDs>6, 18</ConnectedNoteIDs>
+      </Note>
+      <Note Width="156.25" FontSize="12" ID="5" Position="955.5,639.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Bouncer for The Squeaky Valve</String>
+         <ConnectedNoteIDs>6, 12-13, 19</ConnectedNoteIDs>
+      </Note>
+      <Note Width="103.43" FontSize="12" ID="6" Position="745.4,581.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Needs Password</String>
+         <ConnectedNoteIDs>4-5, 12</ConnectedNoteIDs>
+      </Note>
+      <Note Width="99.6582" FontSize="12" ID="7" Position="492.3,583.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Needs Big Bribe</String>
+         <ConnectedNoteIDs>3, 11</ConnectedNoteIDs>
+      </Note>
+      <Note Width="132.788" FontSize="12" ID="8" Position="604.3,731.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Embiggening Machine</String>
+         <ConnectedNoteIDs>11, 18, 23-24</ConnectedNoteIDs>
+      </Note>
+      <Note Width="156.25" FontSize="12" ID="9" Position="701.6,422.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>The Password Written on a wall</String>
+         <ConnectedNoteIDs>12, 14-15</ConnectedNoteIDs>
+      </Note>
+      <Note Width="145.349" FontSize="12" ID="10" Position="509.4,356.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Bill Found on the ground</String>
+         <ConnectedNoteIDs>11</ConnectedNoteIDs>
+      </Note>
+      <Note Width="156.25" FontSize="12" ID="11" Position="484.4,506.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Increase Denomination Of Bill</String>
+         <ConnectedNoteIDs>7-8, 10</ConnectedNoteIDs>
+      </Note>
+      <Note Width="156.25" FontSize="12" ID="12" Position="761.8,508.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Password written on wall Is for the Squeaky Valve</String>
+         <ConnectedNoteIDs>5-6, 9</ConnectedNoteIDs>
+      </Note>
+      <Note Width="156.25" FontSize="12" ID="13" Position="1081.7,492.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Knows the password for Sizeplay</String>
+         <ConnectedNoteIDs>5</ConnectedNoteIDs>
+      </Note>
+      <Note Width="133.228" FontSize="12" ID="14" Position="896.9,422.4">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Written in Zanilandese</String>
+         <ConnectedNoteIDs>9</ConnectedNoteIDs>
+      </Note>
+      <Note Width="156.25" FontSize="12" ID="15" Position="699.3,349.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Zanilandese Dictionary from lending library</String>
+         <ConnectedNoteIDs>9, 44</ConnectedNoteIDs>
+      </Note>
+      <Note Width="131.836" FontSize="12" ID="16" Position="699.1,1172.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>PeeJay the Porcupine</String>
+         <ConnectedNoteIDs>0-2, 24, 37-38, 46-47</ConnectedNoteIDs>
+      </Note>
+      <Note Width="64.2456" FontSize="12" ID="17" Position="512.1,687.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Club Pred</String>
+         <ConnectedNoteIDs>0, 3, 28</ConnectedNoteIDs>
+      </Note>
+      <Note Width="55.4321" FontSize="12" ID="18" Position="734.9,682.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Sizeplay</String>
+         <ConnectedNoteIDs>1, 4, 8</ConnectedNoteIDs>
+      </Note>
+      <Note Width="116.931" FontSize="12" ID="19" Position="968.0,716.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>The Squeaky Valve</String>
+         <ConnectedNoteIDs>2, 5</ConnectedNoteIDs>
+      </Note>
+      <Note Width="80.3467" FontSize="12" ID="20" Position="1124.1,841.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Needs Patch</String>
+         <ConnectedNoteIDs>2, 33</ConnectedNoteIDs>
+      </Note>
+      <Note Width="113.647" FontSize="12" ID="21" Position="1186.7,926.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Needs Air Canister</String>
+         <ConnectedNoteIDs>2, 25, 46</ConnectedNoteIDs>
+      </Note>
+      <Note Width="90.1367" FontSize="12" ID="22" Position="880.4,858.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Needs Panties</String>
+         <ConnectedNoteIDs>1, 23, 26</ConnectedNoteIDs>
+      </Note>
+      <Note Width="109.241" FontSize="12" ID="23" Position="886.8,767.3">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Panties Too Small</String>
+         <ConnectedNoteIDs>8, 22</ConnectedNoteIDs>
+      </Note>
+      <Note Width="152.612" FontSize="12" ID="24" Position="618.1,817.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Your Package is too small</String>
+         <ConnectedNoteIDs>1, 8, 16</ConnectedNoteIDs>
+      </Note>
+      <Note Width="113.623" FontSize="12" ID="25" Position="1339.4,926.1">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Air Canister Empty</String>
+         <ConnectedNoteIDs>21, 29</ConnectedNoteIDs>
+      </Note>
+      <Note Width="140.942" FontSize="12" ID="26" Position="964.9,1081.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Panty Vending Machine</String>
+         <ConnectedNoteIDs>22, 27</ConnectedNoteIDs>
+      </Note>
+      <Note Width="67.749" FontSize="12" ID="27" Position="880.4,978.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Need Coin</String>
+         <ConnectedNoteIDs>26, 28</ConnectedNoteIDs>
+      </Note>
+      <Note Width="100.342" FontSize="12" ID="28" Position="589.7,901.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Coin On Ground</String>
+         <ConnectedNoteIDs>17, 27</ConnectedNoteIDs>
+      </Note>
+      <Note Width="156.25" FontSize="12" ID="29" Position="1339.4,865.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Can fill Air Canister at The Squeaky Valve</String>
+         <ConnectedNoteIDs>25</ConnectedNoteIDs>
+      </Note>
+      <Note Width="63.8184" FontSize="12" ID="30" Position="1305.9,637.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Voluntary 
+Store</String>
+         <ConnectedNoteIDs>31, 33, 35</ConnectedNoteIDs>
+      </Note>
+      <Note Width="74.0234" FontSize="12" ID="31" Position="1408.8,637.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Air Canister</String>
+         <ConnectedNoteIDs>30, 32</ConnectedNoteIDs>
+      </Note>
+      <Note Width="156.25" FontSize="12" ID="32" Position="1227.6,801.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Gives you coupon for Air Canister</String>
+         <ConnectedNoteIDs>2, 31</ConnectedNoteIDs>
+      </Note>
+      <Note Width="78.9429" FontSize="12" ID="33" Position="1213.8,637.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Patched Tire</String>
+         <ConnectedNoteIDs>20, 30</ConnectedNoteIDs>
+      </Note>
+      <Note Width="90.8081" FontSize="12" ID="34" Position="381.9,929.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Needs “Lotion”</String>
+         <ConnectedNoteIDs>0</ConnectedNoteIDs>
+      </Note>
+      <Note Width="50.5005" FontSize="12" ID="35" Position="1331.8,577.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>“Lotion”</String>
+         <ConnectedNoteIDs>30, 42</ConnectedNoteIDs>
+      </Note>
+      <Note Width="76.8433" FontSize="12" ID="36" Position="381.1,998.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Needs Food</String>
+         <ConnectedNoteIDs>0, 37</ConnectedNoteIDs>
+      </Note>
+      <Note Width="140.198" FontSize="12" ID="37" Position="218.8,634.6">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>The Eternal Revolution 
+Diner</String>
+         <ConnectedNoteIDs>16, 36, 38, 41, 44</ConnectedNoteIDs>
+      </Note>
+      <Note Width="156.25" FontSize="12" ID="38" Position="245.4,1128.0">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Gives you gift card for Diner</String>
+         <ConnectedNoteIDs>0, 16, 37</ConnectedNoteIDs>
+      </Note>
+      <Note Width="138.599" FontSize="12" ID="40" Position="27.0,619.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>Needs gift card for food</String>
+         <ConnectedNoteIDs>41</ConnectedNoteIDs>
+      </Note>
+      <Note Width="36.5356" FontSize="12" ID="41" Position="41.1,694.8">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Border Weight="0" Style="Rounded"/>
+         </Appearance>
+         <String>Food</String>
+         <ConnectedNoteIDs>37, 40</ConnectedNoteIDs>
+      </Note>
+      <Note Width="147.229" FontSize="12" ID="42" Position="1331.8,516.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Needs to Verify your Age</String>
+         <ConnectedNoteIDs>35, 43</ConnectedNoteIDs>
+      </Note>
+      <Note Width="33.7402" FontSize="12" ID="43" Position="1331.8,456.7">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Quiz</String>
+         <ConnectedNoteIDs>42</ConnectedNoteIDs>
+      </Note>
+      <Note Width="95.0073" FontSize="12" ID="44" Position="295.7,546.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Lending Library</String>
+         <ConnectedNoteIDs>15, 37, 45</ConnectedNoteIDs>
+      </Note>
+      <Note Width="120.435" FontSize="12" ID="45" Position="136.2,546.2">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Cheat sheet for quiz</String>
+         <ConnectedNoteIDs>44</ConnectedNoteIDs>
+      </Note>
+      <Note Width="97.3511" FontSize="12" ID="46" Position="870.0,1172.5">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Bike has flat tire</String>
+         <ConnectedNoteIDs>16, 21</ConnectedNoteIDs>
+      </Note>
+      <Note Width="109.277" FontSize="12" ID="47" Position="525.7,1052.9">
+         <Appearance>
+            <Alignment>Left</Alignment>
+            <Fill>0.844068 0.869596 0.923064</Fill>
+            <Border Weight="1">0.485893 0.568933 0.756207</Border>
+         </Appearance>
+         <String>Gives you big kiss</String>
+         <ConnectedNoteIDs>1, 16</ConnectedNoteIDs>
+      </Note>
+   </Notes>
+   <BackgroundShapes/>
+   <NoteStyles>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Green Bubble" ID="161698D4-C474-4FCC-90D2-1F9C8E4B9F01" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.399100 0.583322 0.354864</BorderColor>
+         <FillColor>0.808835 0.872419 0.801343</FillColor>
+      </Style>
+      <Style AffectFontStyle="Yes" AffectAlignment="Yes" Name="Title Text" ID="F449ACD7-11BD-40AF-B721-9D2C232307C8" AffectTextColor="No" AffectNoteBody="No" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <IsBold>Yes</IsBold>
+         <FontSize>12.0</FontSize>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Yellow Bubble" ID="E0C33C5D-FDF5-45DF-8370-8470151A452F" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.769436 0.762219 0.390143</BorderColor>
+         <FillColor>0.912963 0.894118 0.644541</FillColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Red Text" ID="26115464-8240-4C08-9E4D-505B0F6AFCB2" AffectTextColor="Yes" AffectNoteBody="No" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <TextColor>1.0 0.0 0.0</TextColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Blue Bubble" ID="42005CE3-B446-448D-95FC-0668252329FA" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.485893 0.568933 0.756207</BorderColor>
+         <FillColor>0.844068 0.869596 0.923064</FillColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Brown Bubble" ID="5A30AC34-5A82-4DA7-8D60-0F06CA1CA548" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.269490 0.164034 0.186694</BorderColor>
+         <FillColor>0.934157 0.888319 0.785290</FillColor>
+      </Style>
+      <Style AffectFontStyle="No" AffectAlignment="No" Name="Pink Bubble" ID="756BB170-759C-4E60-843F-047AA0C4C267" AffectTextColor="No" AffectNoteBody="Yes" AffectSticky="No" AffectSize="No" AffectFade="No">
+         <BorderThickness>1</BorderThickness>
+         <BorderColor>0.690303 0.407263 0.550912</BorderColor>
+         <FillColor>0.898329 0.817472 0.865339</FillColor>
+      </Style>
+   </NoteStyles>
+   <UISettings>
+      <BackgroundColor>1.0 0.988006 0.945006</BackgroundColor>
+      <DefaultFont>Helvetica</DefaultFont>
+      <DefaultTextColor>0.0 0.0 0.0</DefaultTextColor>
+   </UISettings>
+   <PrintSettings VerticalPagination="Auto" HorizontalPagination="Clip" Orientation="Portrait" RightMargin="12.000000" BottomMargin="12.000000" HorizontallyCentered="Yes" ScaleFactor="1.000000" PagesAcross="1" PaperType="na-letter" PagesDown="1" TopMargin="12.000000" Collates="Yes" PaperSize="-1.000000,-1.000000" LeftMargin="12.000000" VerticallyCentered="Yes"/>
+</ScappleDocument>
