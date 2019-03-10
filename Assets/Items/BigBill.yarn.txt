@@ -23,4 +23,5 @@ The bouncer looks the bill over with a confused expression.
 "Huh, that's... big enough, pal. Come in."
 
 <<disable Bouncer>>
+<<removeFromInventory BigBill>>
 ===

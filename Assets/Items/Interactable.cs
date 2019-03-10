@@ -49,6 +49,7 @@ public class Interactable : MonoBehaviour
         Yarn.Value value = new Yarn.Value(true);
         SetVariables(); // For cases where it's never been awoken.
         VariableStorage.Instance.SetValue(InInventoryVariableName, value);
+        DontDestroyOnLoad(this);
     }
 
     public void UseItem(Interactable item, DialogueRunner dialogueRunner)

@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Toontown.unity
+    path: Assets/Scenes/ClubPredFront.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/ClubPred.unity
@@ -17,4 +17,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DonCloseup.unity
     guid: 6ec27c7e6d455d94980cca1ab49d0090
+  - enabled: 1
+    path: Assets/Scenes/DinerFront.unity
+    guid: 13318e3c5536fdf4da9ea1fa7518d446
+  - enabled: 1
+    path: Assets/Scenes/SizeplayFront.unity
+    guid: 0b28bb63b9603004791ba638dbea1128
+  - enabled: 1
+    path: Assets/Scenes/TheSqueakyValveFront.unity
+    guid: c5dddc1af03906f43b493cda8b335b38
+  - enabled: 1
+    path: Assets/Scenes/StoreFront.unity
+    guid: d0304b43004b218469cf04db2752865b
+  - enabled: 1
+    path: Assets/Scenes/Diner.unity
+    guid: 13f229303f49d104b8b5564aa5bdcef2
   m_configObjects: {}

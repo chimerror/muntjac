@@ -1,0 +1,20 @@
+﻿title: Graffiti.Look
+---
+It's some graffiti written on the wall.
+
+It says "The password is: " and some Zanilandese.
+
+You wish you knew Zanilandese.
+===
+title: Graffiti.Touch
+---
+Feels like teen rebellion.
+===
+title: Graffiti.Zipper
+---
+Smells like someone already did. Ew.
+===
+title: Graffiti.Default
+---
+Nah.
+===

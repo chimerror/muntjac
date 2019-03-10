@@ -10,7 +10,7 @@ Just WALK through it.
 ===
 title: ClubPredDoor.Zipper
 ---
-That's public property, Sammy!
+That's public property, Sammi!
 
 Don't mess it up with your privateness!
 ===
@@ -29,5 +29,5 @@ title: ClubPredDoor.Walk
 ===
 title: ClubPredDoor2.Walk
 ---
-<<moveToNextScene Toontown>>
+<<moveToNextScene ClubPredFront>>
 ===

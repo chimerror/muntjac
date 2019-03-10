@@ -1,0 +1,32 @@
+﻿title: Roadway.Look
+---
+A road leads to more of Toontown this way.
+===
+title: Roadway.Touch
+---
+Just WALK to it.
+===
+title: Roadway.Default
+---
+Nah.
+===
+title: DinerRoadway.Walk
+---
+<<moveToNextScene DinerFront>>
+===
+title: SizeplayRoadway.Walk
+---
+<<moveToNextScene SizeplayFront>>
+===
+title: TheSqueakyValveRoadway.Walk
+---
+<<moveToNextScene TheSqueakyValveFront>>
+===
+title: ClubPredRoadway.Walk
+---
+<<moveToNextScene ClubPredFront>>
+===
+title: StoreRoadway.Walk
+---
+<<moveToNextScene StoreFront>>
+===

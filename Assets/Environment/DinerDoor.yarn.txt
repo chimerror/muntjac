@@ -1,0 +1,28 @@
+title: DinerDoor.Look
+---
+The front door to Ron's SCUMMy Diner. Foodaholics serving foodaholics since 1987!
+
+You're not sure why it's called scummy, it seems pretty posh.
+===
+title: DinerDoor.Touch
+---
+Just WALK through it.
+===
+title: DinerDoor.Zipper
+---
+That's public property, Sammi!
+
+Don't mess it up with your privateness!
+===
+title: DinerDoor.Default
+---
+Nah.
+===
+title: DinerDoor.Walk
+---
+<<moveToNextScene Diner>>
+===
+title: DinerDoor2.Walk
+---
+<<moveToNextScene DinerFront>>
+===

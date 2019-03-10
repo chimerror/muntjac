@@ -1634,6 +1634,9 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 8cc70b67796c7c14499bc27e54364d43, type: 3}
   - {fileID: 4900000, guid: 1bbdd509ac1749b4a81624825dda2da1, type: 3}
   - {fileID: 4900000, guid: 0d1b876cadc44254c861389112bea3db, type: 3}
+  - {fileID: 4900000, guid: 2158f8c7c9ab97a41a327dab06640730, type: 3}
+  - {fileID: 4900000, guid: db6142ed627949049883feb0273ed497, type: 3}
+  - {fileID: 4900000, guid: c0c4e611a5b192048b1131c8ce5cbe0f, type: 3}
   stringGroups: []
   shouldOverrideLanguage: 0
   overrideLanguage: 10
@@ -4690,7 +4693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95871ab7482709145a1053883ba5c829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScene: Toontown
+  firstScene: DinerFront
 --- !u!4 &1433170263
 Transform:
   m_ObjectHideFlags: 0
@@ -4699,7 +4702,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433170261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -65.54696, y: 198.49426, z: -1463}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4876,7 +4879,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1483780774}
-  - component: {fileID: 1483780775}
   m_Layer: 0
   m_Name: Conversation
   m_TagString: Untagged
@@ -4904,18 +4906,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 150}
   m_Pivot: {x: 0.5, y: 0}
---- !u!114 &1483780775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1483780773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42b20f938cef2f84fa1f3e73c31ef70e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1497777050
 GameObject:
   m_ObjectHideFlags: 0

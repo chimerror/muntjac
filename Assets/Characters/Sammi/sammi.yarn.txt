@@ -1,0 +1,12 @@
+title: Sammi.Look
+---
+It's you! Sammi the Skunk!
+===
+title: Sammi.Default
+---
+Leave yourself alone, Sammi.
+===
+title: Sammi.TooFar
+---
+It's too far away. Get closer.
+===

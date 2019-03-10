@@ -189,7 +189,7 @@ MonoBehaviour:
   mouseMoveSpeed: 10
   raycastDistance: 25
   interactionDistance: 50
-  tooFarNode: Sammy.TooFar
+  tooFarNode: Sammi.TooFar
 --- !u!61 &61084060368007950
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -251,8 +251,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MouseNodeStrings:
   - Mode: 1
-    NodeToRun: Sammy.Look
-  DefaultNode: Sammy.Default
+    NodeToRun: Sammi.Look
+  DefaultNode: Sammi.Default
   Cursor: {fileID: 0}
 --- !u!95 &95134699837263452
 Animator:

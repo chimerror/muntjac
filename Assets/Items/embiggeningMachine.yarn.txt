@@ -8,7 +8,7 @@ Anything!
 ===
 title: EmbiggeningMachine.Zipper
 ---
-*sigh* Of course that's the first thing you think of.
+*sigh* Of course that's what you think of.
 
 Let's save it until we have a reason.
 

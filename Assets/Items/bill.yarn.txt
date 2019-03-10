@@ -35,6 +35,6 @@ Huh! It didn't make the bill any larger...
 
 It seems to have made it bigger in denomination!
 
-That means it's worth more, Sammy.
+That means it's worth more, Sammi.
 <<placeInInventory BigBill>>
 ===
