@@ -1,0 +1,28 @@
+title: SizeplayDoor.Look
+---
+The front door to Sizeplay, a macro/micro club.
+
+It's got toons what are big and small.
+===
+title: SizeplayDoor.Touch
+---
+Just WALK through it.
+===
+title: SizeplayDoor.Zipper
+---
+That's public property, Sammi!
+
+Don't mess it up with your privateness!
+===
+title: SizeplayDoor.Default
+---
+Nah.
+===
+title: SizeplayDoor.Walk
+---
+<<moveToNextScene Sizeplay>>
+===
+title: SizeplayDoor2.Walk
+---
+<<moveToNextScene SizeplayFront>>
+===

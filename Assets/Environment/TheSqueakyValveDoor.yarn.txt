@@ -1,0 +1,30 @@
+title: TheSqueakyValveDoor.Look
+---
+The front door to The Squeaky Valve, a club for pooltoys.
+
+Where you can blow your hole!
+
+You can't tell if this is too much or too little innuendo.
+===
+title: TheSqueakyValveDoor.Touch
+---
+Just WALK through it.
+===
+title: TheSqueakyValveDoor.Zipper
+---
+That's public property, Sammi!
+
+Don't mess it up with your privateness!
+===
+title: TheSqueakyValveDoor.Default
+---
+Nah.
+===
+title: TheSqueakyValveDoor.Walk
+---
+<<moveToNextScene TheSqueakyValve>>
+===
+title: TheSqueakyValveDoor2.Walk
+---
+<<moveToNextScene TheSqueakyValveFront>>
+===

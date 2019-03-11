@@ -32,4 +32,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Diner.unity
     guid: 13f229303f49d104b8b5564aa5bdcef2
+  - enabled: 1
+    path: Assets/Scenes/Sizeplay.unity
+    guid: 531ccacbcec3e454db11d5cd317fbb23
+  - enabled: 1
+    path: Assets/Scenes/TheSqueakyValve.unity
+    guid: ee6461cbe89b2aa45877f38f92893c53
+  - enabled: 1
+    path: Assets/Scenes/Store.unity
+    guid: c6f63243fac6cae4292616cbf719f5fe
   m_configObjects: {}

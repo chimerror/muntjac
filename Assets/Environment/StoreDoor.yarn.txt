@@ -1,0 +1,28 @@
+title: StoreDoor.Look
+---
+The front door to Al's Convenience Store, a Toontown institution.
+
+You can find anything from a leisure suit to a space mop!
+===
+title: StoreDoor.Touch
+---
+Just WALK through it.
+===
+title: StoreDoor.Zipper
+---
+That's public property, Sammi!
+
+Don't mess it up with your privateness!
+===
+title: StoreDoor.Default
+---
+Nah.
+===
+title: StoreDoor.Walk
+---
+<<moveToNextScene Store>>
+===
+title: StoreDoor2.Walk
+---
+<<moveToNextScene StoreFront>>
+===
