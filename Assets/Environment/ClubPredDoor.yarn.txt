@@ -20,11 +20,15 @@ Nah.
 ===
 title: ClubPredDoor.Walk
 ---
-<<moveToNextScene ClubPred>>
-<<if visited("ClubPredDoor.Walk") is false>>
-    As you enter the illustrious Club Pred, you scan the room...
+<<if is_active("ClubPredBouncer") is false>>
+    <<moveToNextScene ClubPred>>
+    <<if visited("ClubPredDoor.Walk") is false>>
+        As you enter the illustrious Club Pred, you scan the room...
 
-    <<moveToCloseup ClubPredCloseup>>
+        <<moveToCloseup ClubPredCloseup>>
+    <<endif>>
+<<else>>
+    That bouncer is blocking the door!
 <<endif>>
 ===
 title: ClubPredDoor2.Walk

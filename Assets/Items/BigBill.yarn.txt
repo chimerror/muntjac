@@ -16,12 +16,24 @@ title: BigBill.AppliedTo.EmbiggeningMachine
 ---
 It's big enough and likely illegal as is.
 ===
-title: BigBill.AppliedTo.Bouncer
+title: BigBill.AppliedTo.ClubPredBouncer
 ---
 The bouncer looks the bill over with a confused expression.
 
 "Huh, that's... big enough, pal. Come in."
 
-<<disable Bouncer>>
+<<disable ClubPredBouncer>>
 <<removeFromInventory BigBill>>
+===
+title: BigBill.AppliedTo.SizeplayBouncer
+---
+The bouncer takes one glance at the bill and shoves it back into your paws.
+
+"Ain't no such thing as a two thousand dollar bill."
+===
+title: BigBill.AppliedTo.TheSqueakyValveBouncer
+---
+The bouncer takes one glance at the bill and shoves it back into your paws.
+
+"Ain't no such thing as a two thousand dollar bill."
 ===

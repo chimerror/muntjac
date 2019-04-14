@@ -119,6 +119,12 @@ public class PlayerController : MonoBehaviour
         {
             OutOfWorldInventoryItems[pair.PrefabName] = pair.Prefab;
         }
+
+        DialogueRunner.dialogue.library.RegisterFunction("is_active", 1, (Yarn.Value[] parameters) =>
+        {
+            var objectToCheck = GameObject.Find(parameters[0].AsString);
+            return objectToCheck != null && objectToCheck.activeInHierarchy;
+        });
     }
 
     private void Update()

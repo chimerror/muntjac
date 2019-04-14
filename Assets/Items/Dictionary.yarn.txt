@@ -1,0 +1,34 @@
+﻿title: Dictionary.Look
+---
+A Langenzahn brand Zanilandese Pocket Dictionary.
+
+The pages with swear words have been helpfully marked.
+===
+title: Dictionary.Default
+---
+The Zanilandese have a word for ideas like that!
+
+It's the same as their word for 'stupid'.
+===
+title: Dictionary.Zipper
+---
+The Zanilandese have a word for that!
+
+It basically means 'perverted'.
+===
+title: Dictionary.Touch
+---
+<<if $Dictionary_is_in_inventory is false>>
+    You lend yourself the dictionary from the library.
+    <<placeInInventory Dictionary>>
+<<else>>
+    The dictionary is covered in the finest leather-like plastic.
+<<endif>>
+===
+title: Dictionary.AppliedTo.Graffiti
+---
+Aw, now you can read the word!
+
+It's the Zanilandese word for 'swordfish'.
+<<set $password_known to true>>
+===

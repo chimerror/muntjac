@@ -4,7 +4,14 @@ It's some graffiti written on the wall.
 
 It says "The password is: " and some Zanilandese.
 
-You wish you knew Zanilandese.
+<<if $Dictionary_is_in_inventory is false>>
+    You wish you knew Zanilandese.
+<<else>>
+    Pulling out your dictionary reveals...
+
+    It's the Zanilandese word for 'swordfish'.
+    <<set $password_for_tsv_known to true>>
+<<endif>>
 ===
 title: Graffiti.Touch
 ---

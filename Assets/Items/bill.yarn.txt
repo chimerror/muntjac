@@ -23,9 +23,17 @@ title: Bill.Take
     It feels real, and has the right picture. Probably not counterfeit.
 <<endif>>
 ===
-title: Bill.AppliedTo.Bouncer
+title: Bill.AppliedTo.ClubPredBouncer
 ---
 The bouncer snarls. "You're gonna need way more than that, pal."
+===
+title: Bill.AppliedTo.SizeplayBouncer
+---
+The bouncer snarls. "Nope, don't take bribes."
+===
+title: Bill.AppliedTo.TheSqueakyValveBouncer
+---
+The bouncer snarls. "Nope, don't take bribes."
 ===
 title: Bill.AppliedTo.EmbiggeningMachine
 ---

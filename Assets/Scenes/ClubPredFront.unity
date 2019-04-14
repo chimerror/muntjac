@@ -654,7 +654,7 @@ PrefabInstance:
     - target: {fileID: 5900420212984139908, guid: f17b4f67916662845baa98eb9ee21988,
         type: 3}
       propertyPath: m_Name
-      value: Bouncer
+      value: ClubPredBouncer
       objectReference: {fileID: 0}
     - target: {fileID: 5900420212984139908, guid: f17b4f67916662845baa98eb9ee21988,
         type: 3}
@@ -715,6 +715,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934040113897261447, guid: f17b4f67916662845baa98eb9ee21988,
+        type: 3}
+      propertyPath: MouseNodeStrings.Array.data[0].NodeToRun
+      value: ClubPredBouncer.Look
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f17b4f67916662845baa98eb9ee21988, type: 3}

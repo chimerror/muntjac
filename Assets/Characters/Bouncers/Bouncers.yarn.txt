@@ -1,0 +1,27 @@
+title: ClubPredBouncer.Look
+---
+An imposing bouncer stands in front of the door to Club Pred.
+===
+title: SizeplayBouncer.Look
+---
+An imposing bouncer stands in front of the door to Sizeplay.
+===
+title: TheSqueakyValveBouncer.Look
+---
+An imposing bouncer stands in front of the door to The Squeaky Valve.
+===
+title: TheSqueakyValveBouncer.Speak
+---
+<<if $password_for_tsv_known is false>>
+    The bouncer snarls. "What's the password?" they ask.
+<<else>>
+    "swordfish but in an zanilandese accent!"
+
+    The bouncer chuckles and steps aside.
+    <<disable TheSqueakyValveBouncer>>
+<<endif>>
+===
+title: Bouncer.Default
+---
+You suppose they wouldn't like that.
+===
