@@ -20,7 +20,11 @@ Nah.
 ===
 title: SizeplayDoor.Walk
 ---
-<<moveToNextScene Sizeplay>>
+<<if is_active("SizeplayBouncer") is false>>
+    <<moveToNextScene Sizeplay>>
+<<else>>
+    That bouncer is blocking the door!
+<<endif>>
 ===
 title: SizeplayDoor2.Walk
 ---

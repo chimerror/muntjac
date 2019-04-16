@@ -22,7 +22,11 @@ Nah.
 ===
 title: TheSqueakyValveDoor.Walk
 ---
-<<moveToNextScene TheSqueakyValve>>
+<<if is_active("TheSqueakyValveBouncer") is false>>
+    <<moveToNextScene TheSqueakyValve>>
+<<else>>
+    That bouncer is blocking the door!
+<<endif>>
 ===
 title: TheSqueakyValveDoor2.Walk
 ---

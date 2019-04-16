@@ -30,5 +30,5 @@ title: Dictionary.AppliedTo.Graffiti
 Aw, now you can read the word!
 
 It's the Zanilandese word for 'swordfish'.
-<<set $password_known to true>>
+<<set $password_for_tsv_known to true>>
 ===

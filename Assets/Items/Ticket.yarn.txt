@@ -1,0 +1,33 @@
+﻿title: Ticket.Look
+---
+<<if $Ticket_is_in_inventory is false>>
+    Looks like it might be a ticket for something...
+<<else>>
+    A ticket for Sizeplay, an bopping club for toons of all sizes.
+
+    They got toons what are big and small.
+<<endif>>
+===
+title: Ticket.Default
+---
+Nah.
+===
+title: Ticket.Zipper
+---
+Considering you found it on the ground, you decide to keep it away from your bits.
+===
+title: Ticket.Touch
+---
+<<if $Ticket_is_in_inventory is false>>
+    You pick up the ticket! It's for Sizeplay, which is a club you think...
+    <<placeInInventory Ticket>>
+<<else>>
+    Glossy!
+<<endif>>
+===
+title: Ticket.AppliedTo.SizeplayBouncer
+---
+The bouncer takes your ticket, and steps aside.
+<<disable SizeplayBouncer>>
+<<removeFromInventory Ticket>>
+===

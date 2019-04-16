@@ -2,9 +2,24 @@ title: ClubPredBouncer.Look
 ---
 An imposing bouncer stands in front of the door to Club Pred.
 ===
+title: ClubPredBouncer.Speak
+---
+The bouncer snarls. "We're full up. But maybe you can slip me something..."
+===
 title: SizeplayBouncer.Look
 ---
 An imposing bouncer stands in front of the door to Sizeplay.
+===
+title: SizeplayBouncer.Speak
+---
+The bouncer snarls. "No ticket, no entry." they mutter.
+<<if $Ticket_is_in_inventory is true>>
+    You pass over your ticket.
+
+    The bouncer happily accepts and then steps aside.
+    <<disable SizeplayBouncer>>
+    <<removeFromInventory Ticket>>
+<<endif>>
 ===
 title: TheSqueakyValveBouncer.Look
 ---
@@ -12,12 +27,11 @@ An imposing bouncer stands in front of the door to The Squeaky Valve.
 ===
 title: TheSqueakyValveBouncer.Speak
 ---
-<<if $password_for_tsv_known is false>>
-    The bouncer snarls. "What's the password?" they ask.
-<<else>>
-    "swordfish but in an zanilandese accent!"
+The bouncer snarls. "What's the password?" they ask.
+<<if $password_for_tsv_known is true>>
+    "Swordfish but in an zanilandese accent!" you proudly say.
 
-    The bouncer chuckles and steps aside.
+    The bouncer chuckles and steps aside. "Close enough."
     <<disable TheSqueakyValveBouncer>>
 <<endif>>
 ===

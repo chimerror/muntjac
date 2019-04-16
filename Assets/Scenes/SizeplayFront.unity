@@ -552,8 +552,23 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 8934040113897261447, guid: f17b4f67916662845baa98eb9ee21988,
         type: 3}
+      propertyPath: MouseNodeStrings.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934040113897261447, guid: f17b4f67916662845baa98eb9ee21988,
+        type: 3}
       propertyPath: MouseNodeStrings.Array.data[0].NodeToRun
       value: SizeplayBouncer.Look
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934040113897261447, guid: f17b4f67916662845baa98eb9ee21988,
+        type: 3}
+      propertyPath: MouseNodeStrings.Array.data[1].Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934040113897261447, guid: f17b4f67916662845baa98eb9ee21988,
+        type: 3}
+      propertyPath: MouseNodeStrings.Array.data[1].NodeToRun
+      value: SizeplayBouncer.Speak
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f17b4f67916662845baa98eb9ee21988, type: 3}
