@@ -1,0 +1,8 @@
+title: PeeJay.Look
+---
+A porcupine toon is sitting at one of the tables.
+===
+title: PeeJay.Default
+---
+You figure they wouldn't like that.
+===

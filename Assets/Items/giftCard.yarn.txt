@@ -1,0 +1,25 @@
+﻿title: GiftCard.Look
+---
+<<if $GiftCard1_is_in_inventory is false>>
+    Looks like a debit card or something...
+<<else>>
+    It is a gift card for Ron's SCUMMy Diner, which is nearby.
+<<endif>>
+===
+title: GiftCard.Default
+---
+Nah.
+===
+title: GiftCard.Zipper
+---
+That's not a valid magnetic strip reader.
+===
+title: GiftCard.Touch
+---
+<<if $GiftCard1_is_in_inventory is false>>
+    You pick up the card. It seems to be a gift card to Ron's SCUMMy Diner.
+    <<placeInInventory GiftCard1>>
+<<else>>
+    Rubbing the raised plastic numbers feels lovely.
+<<endif>>
+===

@@ -1,0 +1,12 @@
+title: Ron.Look
+---
+The perpetually grumpy diner owner, Ron.
+===
+title: Ron.Speak
+---
+"What can I get you?" Ron says bluntly.
+===
+title: Ron.Default
+---
+You wouldn't want to make him grumpier.
+===
