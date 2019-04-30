@@ -29,6 +29,59 @@ title: DonCloseup.Speak
         "Hey, skunk. You look delicious."
         Wow, you were feeling pretty low about your looks!
         At least you think that was about your looks...
+<<else>>
+    "If it isn't my favorite tasty morsel!"
 <<endif>>
-That's all she wrote.
+"What can I do you for, skunk?"
+[[Make small talk...|DonCloseup.SmallTalk]]
+[[Make a move...|DonCloseup.MakeMove]]
+===
+title: DonCloseup.SmallTalk
+---
+-> Do you come here often?
+    "You bet I do. My favorite place to catch a snack besides the diner."
+    [[Make small talk...|DonCloseup.SmallTalk]]
+    [[Make a move...|DonCloseup.MakeMove]]
+-> Is it true what they say about guys with long teeth?
+    "If it is about their gullet, sure."
+    [[Make small talk...|DonCloseup.SmallTalk]]
+    [[Make a move...|DonCloseup.MakeMove]]
+-> Nice talking to you.
+    "Always a pleasure, skunk."
+    "I'll be here if you want to do more than talk."
+===
+title: DonCloseup.MakeMove
+---
+<<if visited("DonCloseup.MakeMove") is false>>
+    "How about we go someplace more private?" you ask.
+    "Sounds great, skunk. But a couple of things." he says.
+    "I need a little appetizer before the main course."
+    "Something from the diner, perhaps."
+    "And no offense, but you look like you can use some... 'lotion'."
+    "Lotion?" you ask.
+    "I think the store has some." he replies.
+    "It'll make this all go down easier, trust me, skunk."
+    "OK, I'll get right on that!" you say.
+    "Radical."
+<<else>>
+    "What were those things you're looking for?"
+    <<if $Appetizer_is_in_inventory is true>>
+        "Well, you have the appetizer..."
+    <<else>>
+        "Well, I want an appetizer, preferably from the diner."
+    <<endif>>
+    <<if $Lotion_is_in_inventory is true>>
+        "And you have the 'lotion'."
+        <<if $Appetizer_is_in_inventory is true>>
+            [[That's both things!|DonCloseup.Date]]
+        <<endif>>
+    <<else>>
+        "And you still need some 'lotion'"
+        "You can find that at the store."
+    <<endif>>
+<<endif>>
+===
+title: DonCloseup.Date
+---
+TODO: write
 ===

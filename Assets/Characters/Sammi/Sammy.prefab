@@ -186,6 +186,8 @@ MonoBehaviour:
   OutOfWorldInventoryItemPairs:
   - PrefabName: BigBill
     Prefab: {fileID: 114022148966589440, guid: 25f13fb9cfa823c42a55deab5f7dab4b, type: 3}
+  - PrefabName: Appetizer
+    Prefab: {fileID: 265002728666722067, guid: 094fe927f38880848a5f60d2151bc57d, type: 3}
   mouseMoveSpeed: 10
   raycastDistance: 25
   interactionDistance: 50
@@ -317,9 +319,10 @@ Camera:
   m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2

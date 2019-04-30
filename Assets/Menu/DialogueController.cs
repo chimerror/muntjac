@@ -119,6 +119,10 @@ public class DialogueController : Yarn.Unity.DialogueUIBehaviour
         for (int currentChild = childCount - 1; currentChild >= 0; currentChild--)
         {
             var childObject = ConversationOptions.transform.GetChild(currentChild).gameObject;
+            if (childObject.name == "OptionPrefab")
+            {
+                continue;
+            }
             Destroy(childObject);
         }
 
@@ -126,6 +130,7 @@ public class DialogueController : Yarn.Unity.DialogueUIBehaviour
         {
             var option = optionsCollection.options[currentOption];
             var optionButton = Instantiate(OptionPrefab);
+            optionButton.gameObject.SetActive(true);
             optionButton.transform.SetParent(ConversationOptions.transform, false);
             optionButton.enabled = true;
             var optionText = optionButton.GetComponentInChildren<Text>();

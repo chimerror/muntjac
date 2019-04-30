@@ -1675,6 +1675,7 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 7fd0d4c35a1ce634aa0f1fd50830f92f, type: 3}
   - {fileID: 4900000, guid: 38ea4451ee6cfb442857749c48acc559, type: 3}
   - {fileID: 4900000, guid: 020cad32be0a024429d10e6a0c215c7e, type: 3}
+  - {fileID: 4900000, guid: d82b0f293b5575e488e12ba3bb045921, type: 3}
   stringGroups: []
   shouldOverrideLanguage: 0
   overrideLanguage: 10
@@ -5536,7 +5537,7 @@ PrefabInstance:
     - target: {fileID: 5505457553515177238, guid: ae23654785920c14487036f425e7132b,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7627139935937978848, guid: ae23654785920c14487036f425e7132b,
         type: 3}

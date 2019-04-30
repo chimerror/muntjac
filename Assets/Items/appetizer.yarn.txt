@@ -1,0 +1,21 @@
+﻿title: Appetizer.Look
+---
+A take-out container of Don's Special from the diner.
+===
+title: Appetizer.Touch
+---
+Still warm! Probably should hurry up and take it to Don!
+===
+title: Appetizer.Default
+---
+Nah.
+===
+title: Appetizer.AppliedTo.Don
+---
+"Oh nice, thanks!"
+<<if $Lotion_is_in_inventory is false>>
+    "Hang on to it while you look for the 'lotion'."
+<<else>>
+    [[That's both things!|DonCloseup.Date]]
+<<endif>>
+===

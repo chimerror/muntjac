@@ -5,6 +5,23 @@ The perpetually grumpy diner owner, Ron.
 title: Ron.Speak
 ---
 "What can I get you?" Ron says bluntly.
+<<if visited("DonCloseup.MakeMove") is false>>
+    Oh no! There's too many options!
+    Maybe you can decide on one later.
+<<else>>
+    Your eyes immediately land on the Don's Special.
+    He must come here a lot!
+    <<if $GiftCard1_is_in_inventory is false>>
+        "You don't have enough money." Ron says.
+        "Maybe you can find one of our gift cards."
+    <<else>>
+        You pass over the gift card.
+        "Pleasure doing business with you."
+        "Looks like that card is empty now."
+        <<removeFromInventory GiftCard1>>
+        <<placeInInventory Appetizer>>
+    <<endif>>
+<<endif>>
 ===
 title: Ron.Default
 ---

@@ -23,3 +23,17 @@ title: GiftCard.Touch
     Rubbing the raised plastic numbers feels lovely.
 <<endif>>
 ===
+title: GiftCard1.AppliedTo.Ron
+---
+<<if visited("DonCloseup.MakeMove") is false>>
+    You think about using the gift card, but are bewildered by all the options.
+<<else>>
+    Your eyes immediately land on the Don's Special.
+    He must come here a lot!
+    You pass over the gift card.
+    "Pleasure doing business with you."
+    "Looks like that card is empty now."
+    <<removeFromInventory GiftCard1>>
+    <<placeInInventory Appetizer>>
+<<endif>>
+===
