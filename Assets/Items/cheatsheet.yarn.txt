@@ -1,0 +1,28 @@
+﻿title: Cheatsheet.Look
+---
+<<if $Cheatsheet_is_in_inventory is false>>
+    Looks like a piece of paper with letters on it...
+<<else>>
+    It seems to be a cheat sheet for a quiz.
+    "The answers are ABACADABA."
+    "ABACADABA"? That was what you always guessed when you didn't know!
+<<endif>>
+===
+title: Cheatsheet.Default
+---
+Nah.
+===
+title: Cheatsheet.Zipper
+---
+You don't want a papercut down there!
+===
+title: Cheatsheet.Touch
+---
+<<if $Cheatsheet_is_in_inventory is false>>
+    You pick up the piece of paper.
+    It seems to be a cheat sheet for a quiz!
+    <<placeInInventory Cheatsheet>>
+<<else>>
+    It's just a piece of paper, you should LOOK at it.
+<<endif>>
+===

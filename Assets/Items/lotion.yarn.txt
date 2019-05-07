@@ -1,0 +1,33 @@
+﻿title: Lotion.Look
+---
+It's the "lotion" Don asked you to get.
+Though "Simmerin' Sam's Simmerin' Sauce" isn't a brand you're familiar with...
+===
+title: Lotion.Taste
+---
+Part of you wonders why you would eat lotion...
+But you put a dab on your finger and give it a try...
+It tastes okay... a bit smoky...
+===
+title: Lotion.Zipper
+---
+You figure that's something for Don to do to you...
+===
+title: Lotion.Touch
+---
+That's a pretty hefty lotion bottle you got for free!
+===
+title: Lotion.Default
+---
+Nah.
+===
+title: Lotion.AppliedTo.Don
+---
+"Oh nice, thanks!"
+"This will make you that much more appetizing..."
+<<if $Appetizer_is_in_inventory is false>>
+    "Hang on to it while you get the appetizer."
+<<else>>
+    [[That's both things!|DonCloseup.Date]]
+<<endif>>
+===

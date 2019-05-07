@@ -188,6 +188,9 @@ MonoBehaviour:
     Prefab: {fileID: 114022148966589440, guid: 25f13fb9cfa823c42a55deab5f7dab4b, type: 3}
   - PrefabName: Appetizer
     Prefab: {fileID: 265002728666722067, guid: 094fe927f38880848a5f60d2151bc57d, type: 3}
+  - PrefabName: Lotion
+    Prefab: {fileID: 5990668672436191259, guid: 4e0c8bdb2c1855540bf3f78c278d09f6,
+      type: 3}
   mouseMoveSpeed: 10
   raycastDistance: 25
   interactionDistance: 50

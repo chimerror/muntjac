@@ -1,0 +1,149 @@
+title: Al.Look
+---
+The perpetually happy store owner, Al.
+===
+title: Al.Speak
+---
+"What are you looking for?" Al says gladly.
+<<if visited("DonCloseup.MakeMove") is true>>
+    [[I'd like some uh, 'lotion'...|Al.Lotion]]
+<<endif>>
+[[I'm just browsing, thank you.|Al.Finish]]
+===
+title: Al.Lotion
+---
+<<if $Lotion_is_in_inventory is true>>
+    Limit one per customer!
+<<else>>
+    "Whoa, little friend..."
+    "We keep that behind the counter. Grown-ups only."
+    "I am a grown-up!" you say.
+    "I believe ya, but Toontown Law says you gotta take this quiz..."
+    <<if visited("Al.Lotion") is false>>
+    "About pop culture in the early aughts..."
+    "How does that prove how old I am?" you say.
+    "I guess it more proves you're a nerd, but it's the law."
+    <<endif>>
+    "And score perfectly!"
+    <<if visited("Al.Lotion") is false>>
+        "Wouldn't it be easier to show you my ID?" you ask.
+        "Not zany enough, little friend!"
+    <<endif>>
+    [[OK.|Al.Quiz1]]
+    [[Forget it then.|Al.Finish]]
+<<endif>>
+===
+title: Al.Quiz1
+---
+"OK, there's nine multiple-choice questions..."
+"Question 1."
+"Kevin Spacey claims to be an alien in this movie:"
+[[A. K-Pax|Al.Quiz2]]
+[[B. Zoolander|Al.Wrong]]
+[[C. Evolution|Al.Wrong]]
+[[D. Phenomenon|Al.Wrong]]
+===
+title: Al.Quiz2
+---
+"That's right!"
+"Question 2."
+"Halle Berry bared her top in this movie:"
+[[A. Monster's Ball|Al.Wrong]]
+[[B. Swordfish|Al.Quiz3]]
+[[C. Die Another Day|Al.Wrong]]
+[[D. Robots|Al.Wrong]]
+===
+title: Al.Quiz3
+---
+"Correct."
+"Question 3."
+"These two headed the 9/11 Commission:"
+[[A. Kean and Hamilton|Al.Quiz4]]
+[[B. Dean and Randall|Al.Wrong]]
+[[C. Lewis and Newes|Al.Wrong]]
+[[D. Some old white guys|Al.Quiz4]]
+===
+title: Al.Quiz4
+---
+"Right."
+"Question 4."
+"Jack Bauer works for the:"
+[[A. Counter Terrorism Unit|Al.Wrong]]
+[[B. Counter Terror Unit|Al.Wrong]]
+[[C. Counter Terrorist Unit|Al.Quiz5]]
+[[D. Counter Titty Unit|Al.Wrong]]
+===
+title: Al.Quiz5
+---
+"That's correct!"
+"Question 5."
+"The Major Case Squad tacked serious crimes in:"
+[[A. Law & Order: Criminal Intent|Al.Quiz6]]
+[[B. Law & Order: Special Victims Unit|Al.Wrong]]
+[[C. Law & Order: Trial by Jury|Al.Wrong]]
+[[D. Law & Order: Parking Enforcement|Al.Wrong]]
+===
+title: Al.Quiz6
+---
+"Right again!"
+"Question 6."
+"Raiden takes over for Solid Snake in:"
+[[A. Ico|Al.Wrong]]
+[[B. Grand Theft Auto III|Al.Wrong]]
+[[C. Tony Hawk's Pro Skater 3|Al.Wrong]]
+[[D. Metal Gear Solid 2: Sons of Liberty|Al.Quiz7]]
+===
+title: Al.Quiz7
+---
+"Correct-a-mundo."
+"Question 7."
+"The Main protagonist of Final Fantasy X was:"
+[[A. Tidus|Al.Quiz8]]
+[[B. Cid|Al.Wrong]]
+[[C. Cloud|Al.Wrong]]
+[[D. Sonic the Hedgehog|Al.Wrong]]
+===
+title: Al.Quiz8
+---
+"Right on! Almost done!"
+"Question 8."
+"The Master Chief from Halo was created as part of this program:"
+[[A. TROJAN|Al.Wrong]]
+[[B. SPARTAN|Al.Quiz9]]
+[[C. ATHENAN|Al.Wrong]]
+[[D. ATTICAN|Al.Wrong]]
+===
+title: Al.Quiz9
+---
+"Correct. Last one!"
+"Question 9."
+"Gary Condit was a Representative most famous for:"
+[[A. An affair with and disappearance of his intern|Al.QuizComplete]]
+[[B. Being gay|Al.Wrong]]
+[[C. Being the first head of Homeland Security|Al.Wrong]]
+[[D. Running for President|Al.Wrong]]
+[[I give up.|Al.GiveUp]]
+===
+title: Al.QuizComplete
+---
+"You got them all! Here's your lotion!" Al says.
+"Don't I have to pay?" you ask.
+"After dealing with all that bullshit?"
+"No way, little friend!"
+<<placeInInventory Lotion>>
+[[Thanks!|Al.Finish]]
+===
+title: Al.Wrong
+---
+"Sorry little friend, that's wrong!"
+"Try again when you're a little older."
+[[Grrr....|Al.Finish]]
+===
+title: Al.Finish
+---
+"Thanks for shopping here!" Al says with pleasure.
+===
+title: Al.Default
+---
+He's happy enough already.
+===
